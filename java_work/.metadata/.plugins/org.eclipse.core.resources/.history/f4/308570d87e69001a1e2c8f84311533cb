@@ -1,0 +1,28 @@
+package org.comstudy21.ch02;
+
+import java.util.Scanner;
+
+public class Ch02Ex01 {
+	public static void main(String[] args) {
+		int age = 0;
+		Scanner scan = new Scanner(System.in);
+		String result = "미성년자";
+		System.out.printf("나이를 입력해주세요 :");
+		age = scan.nextInt();
+		//미성년자, 청년, 장년, 노년을 구분.
+		if(age>=65)
+		{
+			result = "노년";
+		}
+		else if(age>40)
+		{
+			result = "장년";
+		}
+		else(age>=20)
+		{
+			result = "청년";
+		}
+		System.out.printf("%d세는 %s입니다.",age,result);
+		
+	}
+}

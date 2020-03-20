@@ -1,0 +1,36 @@
+package org.comstudy21.ch02;
+
+import java.util.Scanner;
+
+public class Ch02Ex02 {
+	
+	static Scanner scan = new Scanner(System.in);
+	public static void main(String[] args) {
+		// 성적을 입력 받아서 80점 이상이면 Pass
+		
+		int score = 0;
+		
+		while(true)
+		{
+			System.out.printf("성적을 입력하세요 : ");
+			score = scan.nextInt();
+			if(score==-1)
+			{
+				System.out.println("시스템종료");
+				break;
+			}
+			else if(score>=80)
+			{
+				System.out.println("pass");
+			}
+			else
+			{
+				System.out.println("Nonpass");
+			}
+		}
+		
+		
+		
+	}
+
+}

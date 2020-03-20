@@ -1,0 +1,119 @@
+package org.wonseok;
+
+import java.util.Scanner;
+import static java.lang.System.out;
+
+public class Ch02Ex22 {
+	static Scanner scan = new Scanner(System.in);
+
+	public static void main(String[] args) {
+		int cnt=1;
+		for (int i = 2; i <= 9; i++) {
+			
+			System.out.printf("***%d***\t\t", i);
+			
+			
+			cnt++;
+			int stdan =1;
+			int edan = 1;
+			if(i<=4){
+				if(cnt>3){
+					System.out.println();
+					for(int dd=1; dd<=9; dd++){
+						for(int k=0; k<3; k++){
+							cnt =1;
+							stdan++;
+							System.out.printf("%d*%d=%d\t\t",stdan,edan,stdan*edan);
+						}
+						stdan = 1;
+						edan++;
+						System.out.println();
+					}
+					System.out.println();
+				}
+			}else if(i<=7)
+			{
+				stdan = 4;
+				if(cnt>3){
+					System.out.println();
+					for(int dd=1; dd<=9; dd++){
+						for(int k=0; k<3; k++){
+							cnt =1;
+							stdan++;
+							System.out.printf("%d*%d=%d\t\t",stdan,edan,stdan*edan);
+						}
+						stdan = 4;
+						edan++;
+						System.out.println();
+					}
+					System.out.println();
+				}
+			}
+			else if(i<=9)				
+			{
+				stdan = 7;
+				cnt=1;
+				if(cnt>3){
+					System.out.println("3456345");
+					System.out.println();
+					for(int dd=1; dd<=9; dd++){
+						for(int k=0; k<3; k++){
+							//cnt =1;
+							stdan++;
+							System.out.printf("%d*%d=%d\t\t",stdan,edan,stdan*edan);
+						}
+						stdan = 4;
+						edan++;
+						System.out.println();
+					}
+					System.out.println();
+				}
+			}
+			
+			
+			
+			
+		}
+
+		
+		
+		
+		
+	}
+
+	public static void test2(String[] args) {
+		int startDan = 0;
+		int endDan = 0;
+
+		System.out.print("시작 단을 입력하세요:");
+		startDan = scan.nextInt();
+
+		System.out.print("끝나는 단을 입력하세요:");
+		endDan = scan.nextInt();
+
+		int temp = 0;
+		if (endDan < startDan) {
+			temp = startDan;
+			startDan = endDan;
+			endDan = temp;
+		}
+
+		for (int i = startDan; i <= endDan; i++) {
+			System.out.printf("**********%d**********\n", i);
+			for (int j = 1; j <= 9; j++) {
+				System.out.printf("%d*%d=%d\n", i, j, i * j);
+			}
+		}
+
+	}
+
+	public static void test1(String[] args) {
+		// 구구단 출력
+		for (int i = 2; i <= 9; i++) {
+			for (int j = 1; j <= 9; j++) {
+				System.out.printf("%d x %d = %d\n", i, j, i * j);
+			}
+			System.out.println();
+		}
+	}
+}

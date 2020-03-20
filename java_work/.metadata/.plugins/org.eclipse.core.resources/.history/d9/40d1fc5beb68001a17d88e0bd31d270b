@@ -1,0 +1,13 @@
+package org.comstudy21.ch02;
+
+public class Ch02Ex02 {
+
+	public static void main(String[] args) {
+		// 성적을 입력 받아서 80점 이상이면 Pass
+		
+		
+		
+
+	}
+
+}

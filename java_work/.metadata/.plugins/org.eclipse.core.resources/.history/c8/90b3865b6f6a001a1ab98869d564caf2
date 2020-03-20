@@ -1,0 +1,19 @@
+package org.wonseok;
+
+public class pratice {
+
+	public static void main(String[] args) {
+		for(int i=0; i<3; i++)
+		{
+			for(int j=0; j<3; j++)
+			{
+				if(j==3)
+					break
+				System.out.printf("*");
+			}
+			System.out.println();
+		}
+
+	}
+
+}

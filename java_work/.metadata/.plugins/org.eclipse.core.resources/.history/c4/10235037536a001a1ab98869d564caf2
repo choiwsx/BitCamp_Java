@@ -1,0 +1,71 @@
+package org.wonseok;
+
+import java.util.Scanner;
+import static java.lang.System.out;
+public class CH02EX21 {
+	static Scanner scan = new Scanner(System.in);
+	public static void main(String[] args) {
+		//정수 3개를 입력 받는다.
+		//정수 3개중에서 제일 큰 수, 제일 작은수를 판별해서 출력하기.
+		// 단, 노닐연산자 사용하지 않기.
+		
+		int a,b,c;
+		int max, min1, mid;
+		
+		System.out.println("입력1>");
+		a = scan.nextInt();
+		System.out.println("입력2>");
+		b = scan.nextInt();
+		System.out.println("입력3>");
+		c = scan.nextInt();
+		
+		if(a>b)
+		{
+			if(a>c)
+			{
+				max = a;
+			}
+			else
+			{
+				max = c;
+			}
+		}
+		else
+		{
+			if(b>c)
+			{
+				max = b;
+			}
+			else
+			{
+				max = c;
+			}
+		}
+		if(a<b)
+		{
+			if(a<c)
+			{
+				min1 = a;
+			}
+			else
+			{
+				min1 = c;
+			}
+		}
+		else
+		{
+			if(b<c)
+			{
+				min1 = b;
+			}else
+			{
+				min1 = c;
+			}
+		}
+		System.out.printf("Min : %d, Max : %d",min1, max);
+		
+		
+		
+		
+	}
+}

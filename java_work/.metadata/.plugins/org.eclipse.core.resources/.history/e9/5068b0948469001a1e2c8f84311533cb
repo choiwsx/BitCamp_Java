@@ -1,0 +1,17 @@
+package org.comstudy21.ch02;
+
+import java.util.Scanner;
+
+public class Ch02Ex11 {
+	static Scanner scan = new Scanner(System.in);
+	public static void main(String[] args) {
+		int score = 0;
+		String grade = "F";
+		
+		
+		System.out.println("성적 입력 : " );
+		score = scan.nextInt();
+		
+		
+	}
+}

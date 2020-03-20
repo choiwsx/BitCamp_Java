@@ -1,0 +1,16 @@
+package java_day03;
+
+import java.awt.Frame;
+
+public class Day03ex02 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		//윈도우 창 생성.
+		Frame win = new Frame("My Window");
+		win.setSize(600,400);
+		win.setVisible(true);
+		
+	}
+
+}

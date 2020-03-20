@@ -1,0 +1,9 @@
+package org.homework;
+
+public class pr {
+	public static void main(String[] args) {
+		int arr1[];
+		int arr2 = new int[10];
+		}
+	}
+}

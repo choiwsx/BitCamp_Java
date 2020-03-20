@@ -1,0 +1,15 @@
+package org.comstudy21.ch02;
+
+import java.util.Scanner;
+
+public class Ch02Ex02 {
+	Scanner scan = new Scanner(System.in);
+	
+	public static void main(String[] args) {
+		// 성적을 입력 받아서 80점 이상이면 Pass
+		
+		
+
+	}
+
+}
