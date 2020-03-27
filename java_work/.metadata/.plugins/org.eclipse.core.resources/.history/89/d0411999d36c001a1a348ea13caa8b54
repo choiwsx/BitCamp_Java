@@ -1,0 +1,13 @@
+package org.study.ch03;
+
+import java.util.Scanner;
+
+public class Hello {
+	static Scanner scan = new Scanner(System.in);
+	public static void main(String[] args) {
+		String name;
+		System.out.printf("성명입력:");
+		name = scan.nextLine();
+		System.out.println(name);
+	}
+}

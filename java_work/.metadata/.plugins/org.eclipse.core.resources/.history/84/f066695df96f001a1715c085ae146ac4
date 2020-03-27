@@ -1,0 +1,33 @@
+package org.wonseok;
+
+class 할배 {
+	public void 나팔() {
+		System.out.println("할배 나팔");
+	}
+
+}
+
+class 아배 extends 할배 {
+
+	 @Override
+	public void 나팔() {
+		System.out.println("아배가 나팔을 분다~");
+	}
+}
+
+class 손자 extends 아배
+{
+	@Override
+	public void 나팔()
+	{
+		System.out.println("손자가 나팔을 분당ㅇㅇㅇㅇㅇ");
+	}
+}
+
+
+public class Ch04Ex100 {
+	public static void main(String[] args) {
+		할배 a = new 아배();
+		a.나팔();
+	}
+}

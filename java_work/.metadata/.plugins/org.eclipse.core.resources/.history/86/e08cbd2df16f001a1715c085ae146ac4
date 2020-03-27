@@ -1,0 +1,83 @@
+package org.wonseok;
+
+
+
+
+class Tv{
+	private String name;
+	private String company;
+	private int vol = 10;
+	private int channel = 7;
+	
+	
+	
+	public Tv() {
+		// TODO Auto-generated constructor stub
+		this("no-name","no-company");
+		
+	}
+	public Tv(String name, String company)
+	{
+		this.name = name;
+		this.company = company;
+	}
+
+	public void turnOn() {
+		// TODO Auto-generated method stub
+		System.out.println(this.company+" "+this.name+"TV 켜기");
+		
+	}
+
+	public void volumUp() {
+		// TODO Auto-generated method stub
+		System.out.println("현재 볼륨 레벨은"+(++this.vol)+"입니다.");
+		
+	}
+	
+	public void volumDown() {
+		// TODO Auto-generated method stub
+		
+		System.out.println("현재 볼륨 레벨은"+--this.vol+"입니다.");
+	}
+	
+	public void channelUp() {
+		// TODO Auto-generated method stub
+		
+		System.out.println(++this.channel+"번 방송 보기.");
+	}
+	
+	public void channelDown() {
+		// TODO Auto-generated method stub
+		System.out.println(--this.channel+"번 방송 보기.");
+		
+	}
+	
+	public void turnOff() {
+		// TODO Auto-generated method stub
+		System.out.println(this.company+" "+this.name+"TV 끄기");
+		
+	}
+	
+	
+	
+}
+
+
+
+
+
+
+
+public class Ch04EX98 {
+	public static void main(String[] args) {
+
+		Tv tv = new Tv("올레드","LG");
+		tv.turnOn(); // LG 올레드 TV 켜기.
+		tv.volumUp();  // 현재 볼륨 레벨은 6입니다.
+		tv.volumDown(); 
+		tv.channelUp(); // 11번 방송 보기
+		tv.channelDown(); // 10번 방송 보기
+		tv.turnOff(); // LG 올레드 TV 끄기.
+		
+	}
+}

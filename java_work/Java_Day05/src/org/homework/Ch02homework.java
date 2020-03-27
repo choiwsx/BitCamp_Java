@@ -5,7 +5,85 @@ import java.util.Scanner;
 public class Ch02homework {
 	static Scanner scan = new Scanner(System.in);
 
+	static void println(String message)
+	{
+		System.out.println(message);
+	}
+	static void print(String message)
+	{
+		System.out.print(message);
+	}
+	
+	static void print(int number)
+	{
+		System.out.print(number);
+	}
+	
 	public static void main(String[] args) {
+		int a,b,c;
+		int max,mid,min;
+		
+		// 매개 변수로 인수 전달.
+		
+		print("정수 입력1 : ");
+		a = scan.nextInt();
+		print("정수 입력2 : ");
+		b = scan.nextInt();
+		print("정수 입력3 : ");
+		c = scan.nextInt();
+	
+		
+		if(a>b)
+		{
+			max = a;
+			min = b;
+		}
+		else
+		{
+			max = b;
+			min = a;
+		}
+		if(c>max)
+		{
+			mid = max;
+			max = c;	 
+		{
+			if(c<min)
+			{
+				mid = min;
+				min = c;
+			}
+			else
+			{
+				mid = c;
+			}
+		}
+		System.out.printf("%d %d %d ",min,mid,max);
+		
+		
+	}
+	
+	
+	public static void test2(String[] args) {
+		
+		int cnt = 5;
+		
+		for(int i=0; i<9; i++)
+		{
+			for(int j=0; j<9; j++)
+			{
+				System.out.print(j<cnt || j>=9-cnt?"*":" ");
+				
+			}
+			cnt = i<4? cnt-1 : cnt+1;
+			System.out.println();
+		}
+		
+		
+		
+	}
+	
+	public static void test1(String[] args) {
 
 		int ran = (int) (Math.random() * 50) + 1;
 		//System.out.println(ran);

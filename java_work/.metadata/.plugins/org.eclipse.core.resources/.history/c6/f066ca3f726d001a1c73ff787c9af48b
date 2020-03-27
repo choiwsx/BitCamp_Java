@@ -1,0 +1,19 @@
+package java_day07;
+
+import java.util.Scanner;
+
+public class Ch03Ex23 {
+	static int[] days = {31,28,31,30,31,30,31,31,30,31,30,31};
+	static int total = 0;
+	static Scanner scan = new Scanner(System.in);
+	static int month = 0;
+	static int day = 0;
+	public static void main(String[] args) {
+		System.out.print("월을 입력해주세요>>");
+		month = scan.nextInt();
+		System.out.println(days[month-1]);
+		
+		
+		
+	}
+}

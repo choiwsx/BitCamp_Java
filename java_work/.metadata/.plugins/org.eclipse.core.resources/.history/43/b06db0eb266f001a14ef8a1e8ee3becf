@@ -1,0 +1,11 @@
+package org.wonseok;
+
+import org.MyFrame.HelloWorld;
+
+public class Ch04Ex05 {
+	public static void main(String[] args) {
+		HelloWorld hw = new HelloWorld();
+		hw.SayHello();
+	}
+
+}

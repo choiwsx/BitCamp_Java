@@ -1,0 +1,57 @@
+package org.wonseok;
+
+
+
+class laundry{
+	
+	private int cc;
+	private String name;
+	private String company;
+	
+	public laundry()
+	{
+		this(100,"기본세탁기","기본회사");
+		System.out.println("기본 생성자");
+	}
+	public laundry(int cc, String company, String name)
+	{
+		this.cc = cc;
+		this.company = company;
+		this.name = name;
+	}
+	
+
+	public void wash(){
+		System.out.printf("%s세탁~", this.name);
+	}
+	
+	public void dry(){
+		System.out.println("탈수~");
+	}
+	
+	public void showInfo()
+	{
+		System.out.println("용량 ="+this.cc+" 제조사 ="+this.company+" 이름 ="+this.name);	
+	}
+	
+	
+}
+
+public class Ch04Ex99 {
+	public static void main(String[] args) {
+		laundry[] laund = new laundry[2];
+		
+		laund[0] = new laundry();
+		laund[1] = new laundry(1000,"삼송","최신세탁기");
+		
+		for(laundry l : laund)
+		{
+			l.wash();
+			l.showInfo();
+			
+		}
+		
+		
+		
+	}
+}

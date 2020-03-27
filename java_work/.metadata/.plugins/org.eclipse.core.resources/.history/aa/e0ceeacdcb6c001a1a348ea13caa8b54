@@ -1,0 +1,9 @@
+package org.study.ch03;
+
+public class Ch03Ex02 {
+	public static void main(String[] args) {
+		// 주소를 저장하는 배열을 선언.
+		String[] adressArr = new String[100];
+		
+	}
+}

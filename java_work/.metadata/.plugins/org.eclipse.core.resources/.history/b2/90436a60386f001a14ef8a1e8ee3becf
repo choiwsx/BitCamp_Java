@@ -1,0 +1,79 @@
+package org.wonseok.ch04_1;
+
+
+class Test{
+	public void printArr(int[] arr){
+		for(int i=0; i<arr.length; i++)
+		{
+			System.out.print(arr[i]+" ");
+		}
+	}
+	public void printArr(int[][] arr)
+	{
+		for(int i=0; i<arr.length; i++)
+		{
+			for(int temp : arr[i])
+			{
+				System.out.print(temp+" ");
+			}
+			System.out.println();
+		}
+	}
+	
+	
+	
+	
+	public int[] joinArr(int[] a, int[] b)
+	{
+		int al = a.length;
+		int bl = b.length;
+		int[] arr = new int[al+bl];
+		for(int i=0; i<al; i++)
+		{
+			arr[i] = a[i];
+		}
+		for(int i=0; i<bl; i++)
+		{
+			arr[i+al] = b[i];
+		}
+		return arr;	
+	}
+	
+	public int[][] mkArr(int[] a, int[] b)
+	{
+		int max = 0;
+		if(a.length>b.length)
+			max = a.length;
+		else
+			max = b.length;
+		int[][] arr = new int[2][max];
+		for(int i=0; i<a.length; i++)
+		{
+			arr[0][i] = a[i];
+		}
+		for(int i=0; i<b.length; i++)
+		{
+			arr[1][i] = b[i];
+		}
+		
+		return arr;
+	}
+	
+}
+
+
+public class Ch04Ex07 {
+
+	public static void main(String[] args) {
+		int[] arr1 = {10,20,30,40,50};
+		int[] arr2 = {20,60,80,30, 20};
+		Test test = new Test();
+//		test.printArr(arr);
+		int[] arr3 = test.joinArr(arr1,arr2);
+		test.printArr(arr3);
+		System.out.println();
+		int[][] arr4 = test.mkArr(arr1,arr2);
+		test.printArr(arr4);
+	
+	}
+}

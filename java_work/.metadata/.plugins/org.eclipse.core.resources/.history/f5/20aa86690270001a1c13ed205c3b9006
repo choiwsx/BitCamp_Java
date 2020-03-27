@@ -1,0 +1,82 @@
+package org.wonseok;
+
+
+class Shape{
+	
+	double res;
+	
+	public void area(){
+		
+//		return res;
+	}
+	
+}
+
+class Circle extends Shape{
+	private int r;
+	
+	public Circle()
+	{
+		this.r = 1;
+	}
+	
+	public void area()
+	{
+		res = Math.pow(this.r, 2)*Math.PI;
+		System.out.println(res);
+	}
+
+}
+
+class Rectangle extends Shape{
+	private int W;
+	private int h;
+	
+	public Rectangle()
+	{
+		this.W = 10;
+		this.h = 5;
+	}
+	public void area()
+	{
+		res =  this.W*this.h; 
+		System.out.println(res);
+	}
+	
+}
+class Triangle extends Shape
+{
+	private int W;
+	private int h;
+	
+	public Triangle()
+	{
+		this.W = 10;
+		this.h = 5;
+	}
+	public void area()
+	{
+		res = this.W*this.h*0.5;
+//		return res;
+		System.out.println(res);
+	}
+	
+}
+
+
+
+public class Ch04Ex101 {
+
+	public static void main(String[] args) {
+		Shape ref = null;
+		ref = new Circle();
+//		System.out.println("도형의 면적은" +ref.area());
+		ref.area();
+		ref = new Triangle();
+//		System.out.println(ref.area());
+		ref.area();
+	
+	}
+	
+	
+}
