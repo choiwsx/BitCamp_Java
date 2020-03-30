@@ -7,7 +7,7 @@ class MusicPlayer{
 	
 	public void add(Music m)
 	{
-		if(top<7){
+		if(top<musics.length){
 			musics[top++] = m;
 		}
 		else
@@ -17,10 +17,11 @@ class MusicPlayer{
 	}
 	public void play()
 	{
-		for(int i=0; i<top; i++)
+		while(top>0)
 		{
-			System.out.println(musics[i].getSinger()+"의 "+musics[i].getSong()+" 을 플레이합니다.");
+			musics[--top].play();
 		}
+		System.out.println("더 이상 실행할 곡이 없슴");
 	}	
 }
 
