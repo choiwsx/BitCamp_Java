@@ -12,7 +12,7 @@ class MusicPlayer{
 		}
 		else
 		{
-			System.out.println("MP3∞° ≤À√°Ωø¥Ÿ");
+			System.out.println("MP3∞° ≤À√°Ωø¥Ÿ");§≤	
 		}
 	}
 	public void play()
