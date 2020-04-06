@@ -1,0 +1,38 @@
+package org.wonseok.controller;
+
+
+import static org.wonseok.resource.R.*;
+
+public class Controller {
+
+	public void service() {
+		// TODO Auto-generated method stub
+		viewArr[data.number].display();
+		
+		switch(data.number)
+		{
+		case 1:
+			viewArr[data.number].display();
+			dao.insert(data.dto);
+			break;
+		case 2:
+			viewArr[data.number].display();
+			dao.selectAll();
+			break;
+		case 3:
+			viewArr[data.number].display();
+			dao.search(data.dto);
+			break;
+			
+			
+		case 6:
+			System.out.println("********** 시 스 템 종 료 **********");
+			System.exit(0);
+		}
+		data.number = 0;
+		service();
+		
+		
+	}
+
+}

@@ -1,0 +1,227 @@
+package org.wonseok.pt1;
+
+import java.util.Calendar;
+import java.util.Scanner;
+import java.util.StringTokenizer;
+
+// 1번 문제
+//class MyPoint {
+//	int x;
+//	int y;
+//
+//	public MyPoint() {
+//
+//	}
+//
+//	public MyPoint(int x, int y) {
+//		this.x = x;
+//		this.y = y;
+//	}
+//	@Override
+//	public String toString() {
+//		// TODO Auto-generated method stub
+//		return "Point(" + x + "," + y + ")";
+//	}
+//
+//	public int getX() {
+//		return x;
+//	}
+//
+//	public void setX(int x) {
+//		this.x = x;
+//	}
+//
+//	public int getY() {
+//		return y;
+//	}
+//
+//	public void setY(int y) {
+//		this.y = y;
+//	}
+//
+//	@Override
+//	public boolean equals(Object obj) {
+//		if (obj instanceof MyPoint) {
+//			MyPoint pp = (MyPoint) obj;
+//			if (this.x == pp.getX() && this.y == pp.getY()) {
+//				return true;
+//			}
+//		} 
+//		return false;
+//	}
+//}
+
+//2번 문제
+//class Circle
+//{
+//	int x;
+//	int y;
+//	int radius;
+//	public Circle(int x,int y, int radius)
+//	{
+//		this.x = x;
+//		this.y = y;
+//		this.radius = radius;
+//	}
+//	@Override
+//	public String toString() {
+//		// TODO Auto-generated method stub
+//		return "Circle("+x+","+y+") 반지름"+radius;
+//	}
+//	@Override
+//	public boolean equals(Object obj) {
+//		// TODO Auto-generated method stub
+//		if(obj instanceof Circle)
+//		{
+//			Circle c = (Circle)obj;
+//			if(this.x==c.x&&this.y==c.y)
+//			{
+//				return true;
+//			}
+//		}
+//		return false;
+//	}
+//	
+//}
+
+//6번 문제
+//class timeGame {
+//	int resultTime;
+//	String name;
+//	Scanner scan = new Scanner(System.in);
+//	public timeGame(String name) {
+//		this.name = name;
+//	};
+//
+//	public void game() {
+//		Calendar time = Calendar.getInstance();
+//		System.out.print(name + "시작 <Enter>키>>");
+//		scan.nextLine();
+//		System.out.print("     현재 초 시간 = ");
+//		int first = getTime();
+//		System.out.println(first);
+//		System.out.print("10초 예상후 <Enter>키>>");
+//		scan.nextLine();
+//		System.out.print("     현재 초 시간 = ");
+//		int second = getTime();
+//		System.out.println(second);
+//		if(second<first)
+//		{
+//			second += 60;
+//			setResultTime(Math.abs(second-first));
+//		}else{
+//			setResultTime(Math.abs(second-first));
+//		}
+//	}
+//	
+//	public int getResultTime() {
+//		return resultTime;
+//	}
+//
+//	public void setResultTime(int resultTime) {
+//		System.out.println(resultTime);
+//		this.resultTime = resultTime;
+//	}
+//
+//	public int getTime()
+//	{
+//		Calendar time = Calendar.getInstance();
+//		int time1 = time.get(Calendar.SECOND);
+//		return time1;
+//	}
+//	public void compare(timeGame t)
+//	{
+//		System.out.println(this.name+"의 결과 "+ Math.abs(10 - this.resultTime) +", "+t.name+"의 결과 "
+//				+Math.abs(10 - t.resultTime)+", ");
+//		if(Math.abs(10 - this.resultTime)> Math.abs(10 - t.resultTime))
+//			System.out.println("승자는 "+t.name);
+//		else if(Math.abs(10 - this.resultTime) == Math.abs(10 - t.resultTime))
+//			System.out.println("동점");
+//		else
+//			System.out.println("승자는 "+this.name);
+//	}
+//}
+
+class Seven {
+	Scanner scan = new Scanner(System.in);
+
+	public Seven() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public void first() {
+		String s = "q";
+		while (!s.equals("그만")) {
+			System.out.print(">>");
+			s = scan.nextLine();
+			StringTokenizer st = new StringTokenizer(s, " ");
+			if (!s.equals("그만"))
+				System.out.println("어절 개수는 " + st.countTokens());
+		}
+	}
+
+	public void second() {
+		String s = "q";
+		while (!s.equals("그만")) {
+			System.out.print(">>");
+			s = scan.nextLine();
+			String[] s2 = s.split(" ");
+			int cnt = 0;
+			for (String tmp : s2)
+				cnt++;
+			if (!s.equals("그만"))
+				System.out.println("어절 개수는" + cnt);
+		}
+
+	}
+
+}
+
+public class Home6 {
+
+	public static void main(String[] args) {
+		// MyPoint p = new MyPoint(3, 50);
+		// MyPoint q = new MyPoint(4, 50);
+		// System.out.println(p);
+		// if (p.equals(q))
+		// System.out.println("같은 점");
+		// else
+		// System.out.println("다른 점");
+
+		// Circle a = new Circle(2,3,5);
+		// Circle b = new Circle(2,3,30);
+		// System.out.println("원 a: "+a);
+		// System.out.println("원 b: "+b);
+		// if(a.equals(b))
+		// System.out.println("같은 원");
+		// else
+		// System.out.println("다른 원");
+
+		// 5번 문제
+		// Calendar calc = Calendar.getInstance();
+		// int hourOfDay = calc.get(Calendar.HOUR_OF_DAY);
+		// int min = calc.get(Calendar.MINUTE);
+		// System.out.println("현재 시간은 "+hourOfDay+"시 "+min+"분입니다.");
+		// if(hourOfDay>=4&&hourOfDay<=12)
+		// System.out.println("Good Morining");
+		// else if(hourOfDay>12&&hourOfDay<=18)
+		// System.out.println("Good Afternoon");
+		// else if(hourOfDay>18&&hourOfDay<=22)
+		// System.out.println("Good Evening");
+		// else
+		// System.out.println("Good Night");
+
+		//
+		// System.out.println("10초에 가까운 사람이 이기는 게임입니다.");
+		// timeGame a = new timeGame("황기태");
+		// a.game();
+		// timeGame b = new timeGame("이재문");
+		// b.game();
+		// a.compare(b);
+
+		Seven one = new Seven();
+		// one.first();
+		one.second();
+
+	}
+}

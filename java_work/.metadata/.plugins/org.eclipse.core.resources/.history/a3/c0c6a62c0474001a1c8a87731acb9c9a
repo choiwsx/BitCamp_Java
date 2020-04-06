@@ -1,0 +1,49 @@
+package org.wonseok.model;
+
+public class Dao {
+
+	public static final int MAX = 100;
+	private Dto[] dtoArr = new Dto[MAX];
+	private int top = 0;
+	private int seq = 1;
+	
+	
+	
+	private Dao(){};
+	
+	private static Dao instance;
+	
+	public static Dao getInstance()
+	{
+		if(instance==null)
+			instance = new Dao();		
+		return instance;
+	}
+
+	public void insert(Dto dto) {
+		// TODO Auto-generated method stub
+		dto.setIdx(seq);
+		seq++;
+		dtoArr[top] = dto;
+		top++;
+	}
+
+	public Dto[] selectAll() {
+		// TODO Auto-generated method stub
+		Dto[] arr = new Dto[top];
+		for(int i=0; i<top; i++)
+		{
+			arr[i] = new Dto();
+			arr[i].setIdx(dtoArr[i].getIdx());
+			arr[i].setName(dtoArr[i].getName());
+			arr[i].setPhone(dtoArr[i].getPhone());
+		}
+		
+		
+		return arr;
+	}
+	
+	
+	
+	
+}

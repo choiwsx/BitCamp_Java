@@ -1,0 +1,13 @@
+package org.wonseok.controller;
+
+
+import static org.wonseok.resource.R.*;
+
+public class Controller {
+
+	public void service() {
+		// TODO Auto-generated method stub
+		viewArr[data.number].display();
+	}
+
+}

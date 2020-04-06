@@ -1,0 +1,27 @@
+package org.wonseok.view;
+
+public class Menu implements View {
+	@Override
+	public void display() {
+		// TODO Auto-generated method stub
+		System.out.println(menuTitle);
+		for(int i=1; i<menuArr.length; i++)
+		{
+			System.out.printf("%d.%s ", i, menuArr[i]);
+		}
+		System.out.println();
+		System.out.println("Choice: ");
+		int no = scan.nextInt();
+		
+		data.no = no;
+		
+	}
+	
+	
+//	public static void main(String[] args) {
+//	 new Menu().display();
+//	}
+//	
+	
+	
+}
