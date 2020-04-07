@@ -397,6 +397,45 @@ import java.util.StringTokenizer;
 // }
 // }
 
+class LoveLove {
+	private StringBuffer buffer;
+	Scanner scan = new Scanner(System.in);
+	Scanner scan2 = new Scanner(System.in);
+	private String word;
+	private StringTokenizer token;
+	private String key, value;
+
+	public LoveLove() {
+		// TODO Auto-generated constructor stub
+		play();
+	}
+
+	public void play() {
+		System.out.println(">>");
+		String str = scan.nextLine();
+		buffer = new StringBuffer(str);
+		while (true) {
+			System.out.println("명령 : ");
+
+			word = scan2.next();
+			if (word.equals("그만")) {
+				System.out.println("종료합니다.");
+			}
+			token = new StringTokenizer(word, "!");
+			if (token.countTokens() != 2) {
+				System.out.println("잘못된 명령입니다.");
+			}else
+			{
+				key = token.nextToken();
+				value = token.nextToken();
+				int idx = buffer.indexOf(key);
+				buffer.replace(idx, idx+key.length(), value);
+			}
+		}
+	}
+
+}
+
 public class Home6 {
 	static Scanner scan = new Scanner(System.in);
 
@@ -464,8 +503,8 @@ public class Home6 {
 		//
 		// p1.game(p2);
 
-		Eleven e = new Eleven();
-		e.game();
+//		Eleven e = new Eleven();
+//		e.game();
 
 		// System.out.print("겜블링 게임에 참여할 선수 숫자>>");
 		// int no = scan.nextInt();
@@ -486,5 +525,9 @@ public class Home6 {
 		// cnt = 0;
 		// }
 
+		LoveLove l = new LoveLove();
+		
+		
+		
 	}
 }
