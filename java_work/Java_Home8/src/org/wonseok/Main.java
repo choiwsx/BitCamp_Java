@@ -8,8 +8,99 @@ import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+<<<<<<< HEAD
 import java.util.Scanner;
 
+=======
+import java.util.HashMap;
+import java.util.Scanner;
+
+class Ten{
+	
+	Scanner scan = new Scanner(System.in);
+	public Ten() {
+		// TODO Auto-generated constructor stub
+		HashMap<String, String> map = new HashMap<>();
+		
+		try {
+			File file = new File("c:\\temp\\phone.txt");
+			FileReader fr = new FileReader(file);
+			BufferedReader buf = new BufferedReader(fr);
+			String line = "";
+			while((line=buf.readLine())!=null)
+			{
+				String[] s = line.split(" ");
+				map.put(s[0], s[1]);
+			}
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		System.out.println("총 "+map.size()+"개의 전화번호를 읽었습니다.");
+		while(true)
+		{
+			System.out.print("이름>>");
+			String name = scan.next();
+			if(name.equals("그만"))
+				break;
+			if(map.containsKey(name))
+				System.out.println(map.get(name));
+			else
+				System.out.println("찾는 이름이 없습니다.");
+		}
+	}
+}
+
+
+class Nine{
+	public Nine() {
+		// TODO Auto-generated constructor stub
+		File f = new File("c:\\temp");
+		
+		File[] fArr = f.listFiles();
+		int cnt =0;
+		for(int i=0; i<fArr.length; i++)
+		{
+			File tf = fArr[i];
+			int idx = tf.getName().lastIndexOf(".txt");
+			if(idx!=-1) {
+				tf.delete();
+				cnt++;
+				System.out.println("c:\\temp\\"+tf.getName()+" 삭제");
+			}
+		}
+		System.out.println("총 "+cnt+"개의 .txt 파일을 삭제하였습니다.");
+	}
+	
+}
+
+
+class Eight{
+	public Eight() {
+		// TODO Auto-generated constructor stub
+		String size="";
+		File f = new File("C:\\");
+		File[] fArr = f.listFiles();
+		
+		long max = 0;
+		String name ="";
+		for(int i=0; i<fArr.length; i++)
+		{
+			File tf = fArr[i];
+			if(max<tf.length()) {
+				max = tf.length();
+				name = tf.getName();
+			}
+		}
+		size = Long.toString(max)+"bytes";
+		System.out.println(name+" "+size);
+	}
+}
+
+>>>>>>> 9d26f653b492355a5b8c2743645627ed279dc073
 class Seven {
 	public Seven() {
 		// TODO Auto-generated constructor stub
@@ -243,6 +334,13 @@ public class Main {
 		// Four f = new Four();
 		// Five f = new Five();
 		// Six s = new Six();
+<<<<<<< HEAD
 		Seven s = new Seven();
+=======
+//		Seven s = new Seven();
+//		Eight e = new Eight();
+//		Nine n = new Nine();
+		Ten t = new Ten();
+>>>>>>> 9d26f653b492355a5b8c2743645627ed279dc073
 	}
 }
