@@ -1,0 +1,10 @@
+package org.wonseok;
+
+import java.awt.Frame;
+
+public class Ch09Ex01 {
+	public static void main(String[] args) {
+		Frame frame = new Frame();
+		frame.setSize(640,480);
+	}
+}

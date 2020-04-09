@@ -1,0 +1,18 @@
+package org.wonseok;
+
+public class Ch09Ex05 extends MyFrame {
+	Button[] btns = new Button[8];
+	
+	
+	public Ch09Ex05() {
+		// TODO Auto-generated constructor stub
+	
+		
+		
+		setVisible(true);
+	}
+	
+	public static void main(String[] args) {
+		new Ch09Ex05();
+	}
+}

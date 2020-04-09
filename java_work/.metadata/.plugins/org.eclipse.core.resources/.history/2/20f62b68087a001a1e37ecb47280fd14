@@ -1,0 +1,18 @@
+package org.wonseok;
+
+public class Ch09Ex04 extends MyFrame {
+
+	public Ch09Ex04() {
+		// TODO Auto-generated constructor stub
+		
+		
+		
+		setVisible(true);
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		new Ch09Ex04();
+	}
+
+}

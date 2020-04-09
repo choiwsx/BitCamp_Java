@@ -1,0 +1,52 @@
+package org.wonseok;
+
+import java.awt.Button;
+import java.awt.GridLayout;
+import java.awt.Panel;
+
+public class Calc extends MyFrame {
+	
+	Panel p = new Panel(new GridLayout(6,5, 10, 0));
+	
+	Button mcBtn = new Button("MC");
+	Button mrBtn = new Button("MR");
+	Button msBtn = new Button("MS");
+	Button mpBtn = new Button("M+");
+	Button mmBtn = new Button("M-");
+	Button bsBtn = new Button("<-");
+	Button ceBtn = new Button("CE");
+	Button cBtn = new Button("C");
+	Button pmBtn = new Button("±");
+	Button rBtn = new Button("√");
+	Button divBtn = new Button("/");
+	Button reBtn = new Button("%");
+	Button multiBtn = new Button("*");
+	Button plusBtn = new Button("+");
+	Button minusBtn = new Button("-");
+	Button onexBtn = new Button("1/x");
+	
+	
+	public Calc() {
+		// TODO Auto-generated constructor stub
+		p.add(mcBtn);
+		p.add(mrBtn);
+		p.add(msBtn);
+		p.add(mpBtn);
+		p.add(mmBtn);
+		p.add(bsBtn);
+		p.add(ceBtn);
+		p.add(cBtn);
+		p.add(pmBtn);
+		p.add(rBtn);
+		p.add(divBtn);
+		
+		add("Center",p);
+		setVisible(true);
+	}
+	
+	public static void main(String[] args) {
+		new Calc();
+		
+		
+	}
+}

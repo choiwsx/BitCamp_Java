@@ -1,0 +1,12 @@
+package org.wonseok;
+
+public class Ch09Ex03 extends MyFrame{
+	public Ch09Ex03(String title) {
+		// TODO Auto-generated constructor stub
+		super(title);
+	}
+	
+	public static void main(String[] args) {
+		new Ch09Ex03("고객지원시스템").setVisible(true);
+	}
+}

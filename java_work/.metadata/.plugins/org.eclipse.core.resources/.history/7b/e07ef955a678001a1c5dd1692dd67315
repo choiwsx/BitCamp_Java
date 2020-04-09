@@ -1,0 +1,34 @@
+package org.wonseok;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+import org.json.JSONTokener;
+
+public class Ch08Ex04 {
+	public static void main(String[] args) throws IOException, JSONException {
+		InputStream is = Ch08Ex04.class.getResourceAsStream("Person.json");
+		int data = 0;
+//		while((data=is.read())!=-1)
+//		{
+//			https://cafe.naver.com/bikecargogo/3277554System.out.println((char)data);
+//		}
+//		InputStreamReader isr = new InputStreamReader(is);
+//		BufferedReader br = new BufferedReader(isr);
+//		String line = "";
+//		while((line=br.readLine())!=null)
+//		{
+//			System.out.println(line);
+//		}
+		JSONTokener tokener = new JSONTokener(is);
+		JSONObject json = new JSONObject(tokener);
+		System.out.println(json.get("name"));
+		
+		JSONObject json2 = new JSONObject();
+		json2.put("name", "하잉~");
+	}
+}

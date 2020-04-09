@@ -1,0 +1,17 @@
+package org.wonseok.calc;
+
+import org.wonseok.MyFrame;
+
+public class MyCalc extends MyFrame {
+	
+	
+	public MyCalc() {
+		// TODO Auto-generated constructor stub
+	
+	}
+	
+	public static void main(String[] args) {
+		
+	}
+
+}

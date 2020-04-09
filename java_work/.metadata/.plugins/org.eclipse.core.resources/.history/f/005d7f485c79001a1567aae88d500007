@@ -1,0 +1,25 @@
+package org.wonseok;
+
+import java.util.Vector;
+
+class Word{
+	
+}
+
+
+public class WordQuiz {
+	Vector<Word> v = new Vector<Word>();
+	{
+		
+	}
+	
+	
+	public WordQuiz() {
+		// TODO Auto-generated constructor stub
+		
+		
+	}
+	public static void main(String[] args) {
+		
+	}
+}

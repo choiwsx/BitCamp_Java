@@ -1,0 +1,14 @@
+package org.wonseok;
+
+import java.awt.Frame;
+
+public class Ch09Ex02 extends Frame{  
+	public Ch09Ex02() {
+		// TODO Auto-generated constructor stub
+		this.setSize(480,320);
+	}
+	public static void main(String[] args) {
+		new Ch09Ex02().setVisible(true);
+	}
+
+}

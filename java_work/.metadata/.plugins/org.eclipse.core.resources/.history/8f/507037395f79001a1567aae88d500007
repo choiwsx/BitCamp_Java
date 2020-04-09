@@ -1,0 +1,60 @@
+package org.wonseok;
+
+import java.util.Hashtable;
+import java.util.Random;
+import java.util.Scanner;
+import java.util.Set;
+import java.util.Vector;
+
+class Word<K, V> extends Hashtable<K, V>{
+	
+	public Word(K key, V value)
+	{
+		super.put(key, value);
+	}
+}
+
+
+public class WordQuiz {
+	Vector<Word> v = new Vector<Word>();
+	{
+		v.add(new Word("love","사랑"));
+		v.add(new Word("animal","동물"));
+		v.add(new Word("bear","곰"));
+		v.add(new Word("pitcure","사진"));
+		v.add(new Word("society","사회"));
+		v.add(new Word("human","인간"));
+		v.add(new Word("mankind","인류"));
+		v.add(new Word("painting","그림"));
+		
+	}
+	Scanner scan = new Scanner(System.in);
+	Random rand = new Random();
+	
+	
+	public WordQuiz() {
+		// TODO Auto-generated constructor stub
+		System.out.println("\"명품영어\"의 단어 테스트를 시작합니다. -1을 입력하면 종료합니다.");
+		System.out.println("현재 "+v.size() +"개의 단어가 들어 있습니다.");
+		int no = 0;
+		while(no!=-1)
+		{
+			
+			int idx = rand.nextInt(v.size());
+			Word word = v.get(idx);
+			String eng = (String)(word.keys()).nextElement();
+			System.out.print(eng+"?");
+			Set<String> values = word.get(eng);
+			System.out.print(" :>");
+			
+			no= scan.nextInt();
+			
+			
+		}
+		System.out.println("명품 영어 조료하.");
+		
+	}
+	public static void main(String[] args) {
+		new WordQuiz();
+	}
+}

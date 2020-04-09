@@ -1,0 +1,17 @@
+package org.wonseok;
+
+import java.awt.FlowLayout;
+
+public class Ch09Ex03 extends MyFrame{
+	public Ch09Ex03(String title) {
+		// TODO Auto-generated constructor stub
+		super(title, 640, 380);
+		
+		FlowLayout layout = new FlowLayout();
+		setLayout(layout);
+	}
+	
+	public static void main(String[] args) {
+		new Ch09Ex03("고객지원시스템").setVisible(true);
+	}
+}
