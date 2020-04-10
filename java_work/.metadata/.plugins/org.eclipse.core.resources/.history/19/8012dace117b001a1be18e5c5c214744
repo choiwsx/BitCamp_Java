@@ -1,0 +1,10 @@
+package org.wonseok.main;
+
+import org.wonseok.controller.Controller;
+
+public class MainCls {
+	public MainCls() {
+		// TODO Auto-generated constructor stub
+		Controller controller = new Controller();
+	}
+}

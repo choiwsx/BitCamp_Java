@@ -1,0 +1,9 @@
+package org.wonseok.model;
+
+public class Dto {
+	private String num;
+	private String name;
+	private String email;
+	private String 
+
+}

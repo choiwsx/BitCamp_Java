@@ -1,0 +1,14 @@
+package org.wonseok.swing;
+
+import javax.swing.JFrame;
+
+public class CheckBoxExam extends JFrame{
+
+	public CheckBoxExam() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	public static void main(String[] args) {
+		new CheckBoxExam();
+	}
+}

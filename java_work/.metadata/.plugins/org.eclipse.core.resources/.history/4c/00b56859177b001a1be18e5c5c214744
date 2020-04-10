@@ -1,0 +1,19 @@
+package org.wonseok.controller;
+
+import static org.wonseok.resource.R.*;
+
+public class Controller {
+	public void service() {
+		viewArr[0].main(null);
+
+		System.out.println(data.btnNum);
+
+		while (true) {
+			if (data.btnNum == 1) {
+				System.out.println("!!!!!");
+				break;
+			}
+			System.out.println("?");
+		}
+	}
+}

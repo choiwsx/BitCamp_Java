@@ -1,0 +1,11 @@
+package org.wonseok.resource;
+
+import java.util.Scanner;
+
+import org.wonseok.view.View;
+
+public interface R {
+	Scanner scan = new Scanner(System.in);
+	
+	View[] viewArr ={new View()};
+}

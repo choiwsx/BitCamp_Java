@@ -1,0 +1,11 @@
+package org.wonseok.controller;
+
+import static org.wonseok.resource.R.*;
+
+public class Controller {
+	public void service()
+	{	
+		viewArr[0].getClass();
+		System.out.println(viewArr[0]s);
+	}
+}
