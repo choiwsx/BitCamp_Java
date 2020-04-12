@@ -472,9 +472,7 @@ public class Calc extends MyFrame implements ActionListener{
 		if(e.getSource() instanceof JButton)
 		{
 			JButton b = new JButton();
-//			System.out.println(b.getLayout()+"를 눌렀당.");
-//			System.out.println("오잉");
-//			System.out.println(b.text);
+			
 		}
 	}
 }

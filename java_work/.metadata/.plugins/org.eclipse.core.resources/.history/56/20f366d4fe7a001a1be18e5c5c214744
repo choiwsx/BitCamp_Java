@@ -1,0 +1,22 @@
+package org.wonseok.jtable;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+public class JtableExam extends JFrame{
+	
+	
+	JPanel contentPane = 
+	
+	public JtableExam() {
+		// TODO Auto-generated constructor stub
+	
+		setSize(640,400);
+		
+	
+	}
+
+	public static void main(String[] args) {
+
+	}
+}

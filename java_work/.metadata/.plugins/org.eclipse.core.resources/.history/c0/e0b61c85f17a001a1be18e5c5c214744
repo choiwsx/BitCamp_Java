@@ -1,0 +1,9 @@
+package org.wonseok.swing;
+
+import javax.swing.JOptionPane;
+
+public class DialogExam {
+	public static void main(String[] args) {
+		JOptionPane.showMessageDialog(null, "일자리가 보장 되었습니다!");
+	}
+}

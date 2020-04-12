@@ -1,0 +1,27 @@
+package org.wonseok.swing;
+
+import java.awt.FlowLayout;
+
+import javax.swing.JCheckBox;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+public class CheckBoxExam extends JFrame{
+
+	JCheckBox ch01 = new JCheckBox("등산",true);
+	JCheckBox ch02 = new JCheckBox("윈드서핑",true);
+	JCheckBox ch03 = new JCheckBox("독서",false);
+	
+	JPanel p = new JPanel(new FlowLayout());
+	
+	public CheckBoxExam() {
+		// TODO Auto-generated constructor stub
+		p.add(ch01);
+		p.add(ch02);
+		p.add(ch03);
+	}
+	
+	public static void main(String[] args) {
+		new CheckBoxExam();
+	}
+}

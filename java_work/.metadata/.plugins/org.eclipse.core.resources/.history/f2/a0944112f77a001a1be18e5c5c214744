@@ -1,0 +1,19 @@
+package org.wonseok.swing;
+
+import javax.swing.JCheckBox;
+import javax.swing.JFrame;
+
+public class CheckBoxExam extends JFrame{
+
+	JCheckBox ch01 = new JCheckBox("등산",true);
+	JCheckBox ch02 = new JCheckBox("윈드서핑",true);
+	JCheckBox ch03 = new JCheckBox("독서",false);
+	
+	public CheckBoxExam() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	public static void main(String[] args) {
+		new CheckBoxExam();
+	}
+}

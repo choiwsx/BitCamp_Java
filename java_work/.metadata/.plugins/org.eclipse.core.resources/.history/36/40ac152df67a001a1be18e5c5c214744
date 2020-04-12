@@ -1,0 +1,17 @@
+package org.wonseok.swing;
+
+import javax.swing.JFrame;
+import javax.swing.JRadioButton;
+
+public class RadioBtnExam extends JFrame {
+
+	JRadioButton rb01 = new JRadioButton("학생",true);
+	JRadioButton rb02 = new JRadioButton("직장인",false);
+	JRadioButton rb03 = new JRadioButton("우수 회원",false);
+	JRadioButton rb04 = new JRadioButton("일반 회원",false);
+	public static void main(String[] args) {
+		
+		
+		
+	}
+}

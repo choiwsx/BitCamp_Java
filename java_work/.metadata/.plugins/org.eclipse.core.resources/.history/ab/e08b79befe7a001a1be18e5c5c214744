@@ -1,0 +1,19 @@
+package org.wonseok.jtable;
+
+import javax.swing.JFrame;
+
+public class JtableExam extends JFrame{
+	
+	
+	
+	public JtableExam() {
+		// TODO Auto-generated constructor stub
+	
+		setSize(640,400);
+	
+	}
+
+	public static void main(String[] args) {
+
+	}
+}
