@@ -81,6 +81,8 @@ public class Calc extends MyFrame implements ActionListener{
 	
 	HashMap<Integer, JButton> map = new HashMap<>();
 	boolean flag = false;
+	int total = 0;
+	int tmpInt = 0;
 	public Calc() {
 		setLayout(new GridLayout(2,1));
 		
@@ -382,16 +384,74 @@ public class Calc extends MyFrame implements ActionListener{
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				// TODO Auto-generated method stub
+//				String l1S = l.getText();
+//				String s = l2.getText();
+//				String tmp = s+"+";
+//				l.setText(l1S+tmp);
+//				int tmp1 = Integer.parseInt(s);
+//				total += tmp1;
 				String l1S = l.getText();
 				String s = l2.getText();
-				String tmp = s+"+";
-				l.setText(l1S+tmp);
-				l2.setText(s);
+				tmpInt = Integer.parseInt(s);
+				s = s+'+';
+				l.setText(l1S+s);
+				calcu();
+//				String to = Integer.toString(total);
+//				l2.setText(to);
 				flag = true;
 			}
 		});
-
+		b24.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				String l1S = l.getText();
+				String s = l2.getText();
+				tmpInt = Integer.parseInt(s);
+				s = s+'-';
+				l.setText(l1S+s);
+				calcu();
+//				String to = Integer.toString(total);
+//				l2.setText(to);
+				flag = true;
+			}
+		});
+		
 	}
+	
+	public void calcu()
+	{
+		String calcS = l.getText();
+		String ans;
+		char ch = calcS.charAt(calcS.length()-1);
+		System.out.println(ch);
+		switch(ch)
+		{
+		case '+':
+			total += tmpInt;
+			ans = Integer.toString(total);
+			l2.setText(ans);
+			break;
+		case '-':
+//			total -= tmpInt;
+			ans = Integer.toString(total);
+			l2.setText(ans);
+			break;
+		case '*':
+			total *= tmpInt;
+			ans = Integer.toString(total);
+			l2.setText(ans);
+			break;
+		case '/':
+			total /= tmpInt;
+			ans = Integer.toString(total);
+			l2.setText(ans);
+			break;
+			
+		}
+		
+	}
+	
 	
 	public void make(JButton b, int x, int y, int w, int h)
 	{
