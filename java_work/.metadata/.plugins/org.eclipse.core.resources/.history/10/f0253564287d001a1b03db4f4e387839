@@ -1,0 +1,15 @@
+{
+  "studentArr": [
+    {
+      "phone": "010-1111-1111",
+      "name": "홍길동",
+      "email": "hong@nave.rocm"
+    },
+    {
+      "phone": "010-2-1111",
+      "name": "최원떡",
+      "email": "won@nave.rocm"
+    }
+  ],
+  "cnt": 2
+}

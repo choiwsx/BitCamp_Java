@@ -1,0 +1,18 @@
+package org.wonseok.controller;
+
+import java.util.Vector;
+
+public class InputController implements Controller {
+
+	public InputController() {
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public void service() {
+		// TODO Auto-generated method stub
+		
+ 
+	}
+
+}

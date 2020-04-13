@@ -1,0 +1,35 @@
+package org.wonseok.evt_handler;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+
+import org.wonseok.view.ButtonView;
+
+public class ButtonEvtHandler implements ActionListener {
+
+	ButtonView target;
+	
+	public ButtonEvtHandler(ButtonView target) {
+		this.target = target;
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
+//		public JButton allBtn = new JButton("전체보기");
+//		public JButton inputBtn = new JButton("입력");
+//		public JButton deleteBtn = new JButton("삭제");
+//		public JButton searchBtn = new JButton("검색");
+//		public JButton cancelBtn = new JButton("취소");
+		if(e.getSource() instanceof JButton)
+		{
+			JButton btn = (JButton)e.getSource();
+		}
+		
+		
+		
+	}
+
+}

@@ -1,0 +1,14 @@
+package test.json;
+
+import java.io.InputStream;
+
+import org.json.JSONTokener;
+
+public class Ex01_2 {
+	public static void main(String[] args) {
+		// JSON 파일로 부터 읽어 들이기
+		String filepath = "students.json";
+		InputStream inputStream =Ex01_2.class.getResourceAsStream(filepath);
+		JSONTokener token = new JSONTokener(inputStream);
+	}
+}

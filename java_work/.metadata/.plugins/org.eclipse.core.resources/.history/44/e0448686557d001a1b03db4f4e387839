@@ -1,0 +1,27 @@
+package org.wonseok.controller;
+
+import java.util.Vector;
+
+import org.wonseok.model.Dao;
+import org.wonseok.model.Member;
+
+public class InputController implements Controller {
+
+	public InputController() {
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public void service() {
+		// TODO Auto-generated method stub
+		String name = nameField.getText();
+		String email = emailField.getText();
+		String phone = phoneField.getText();
+		Member dto = new Member(0,name,email,phone);
+	}
+	
+	public static void main(String[] args) {
+		Dao dao = new Dao();
+		dao.insert(new Member(0,"a","a@a.naver.com","a"));
+	}
+}

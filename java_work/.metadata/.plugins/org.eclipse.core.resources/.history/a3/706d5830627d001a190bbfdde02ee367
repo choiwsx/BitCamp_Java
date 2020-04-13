@@ -1,0 +1,64 @@
+package org.wonseok.controller;
+
+import java.util.Vector;
+
+import javax.swing.JOptionPane;
+
+import org.wonseok.model.Member;
+
+public class DeleteController implements Controller {
+
+	public DeleteController() {
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public void service() {
+		// TODO Auto-generated method stub
+		String name = nameField.getText();
+		String email = emailField.getText();
+		String phone = phoneField.getText();
+		Member dto = new Member(0,name,email,phone);
+		Vector<Vector> searchList = dao.search(dto);
+		System.out.println(searchList);
+		if(searchList!=null)
+		{
+			while(dm.getRowCount()>0)
+			{
+				dm.removeRow(0);
+			}
+			for(Vector rowData : searchList)
+			{
+				dm.addRow(rowData);
+			}
+		}
+		else
+		{
+			System.out.println("출력 할 데이터가 없습니다.");
+		}
+		
+		String input = JOptionPane.showInputDialog("몇번의 "+dto.getName()+"을 지우시겠습니까?");
+		System.out.println(input);
+		if(input==null){
+			JOptionPane.showMessageDialog(null, "경고", "번호를 입력하세요", JOptionPane.WARNING_MESSAGE);
+		}
+		else{
+		for(int i=0; i<searchList.size(); i++)
+		{
+			Vector v = new Vector<>();
+			v = searchList.get(i);
+			int temp = Integer.parseInt(input);
+			if(temp==(Integer)v.get(0))
+			{
+				System.out.println("같은거 발견");
+				dao.remove(temp);
+			}
+			else
+			{
+				System.out.println("같은 숫자 없음");
+			}
+		}
+		}
+	}
+
+}

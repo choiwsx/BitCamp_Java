@@ -1,0 +1,55 @@
+package org.wonseok.evt_handler;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+
+import org.wonseok.model.Member;
+import org.wonseok.view.ButtonView;
+
+public class ButtonEvtHandler implements ActionListener {
+
+	ButtonView target;
+	
+	public ButtonEvtHandler(ButtonView target) {
+		this.target = target;
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		if(e.getSource() instanceof JButton)
+		{
+			JButton btn = (JButton)e.getSource();
+			if(btn== target.allBtn)
+			{
+				System.out.println("전체보기..");
+			}
+			if(btn== target.inputBtn)
+			{
+				System.out.println("입력..");
+				Member dto = new Member();
+				dto.setNo(5);
+				dto.setName(target.nameField.getText());
+				dto.setEmail(target.emailField.getText());
+				dto.setPhone(target.phoneField.getText());
+			}
+			if(btn== target.deleteBtn)
+			{
+				System.out.println("삭제..");
+				
+			}
+			if(btn== target.searchBtn)
+			{
+				System.out.println("검색..");
+				
+			}
+			if(btn== target.cancelBtn)
+			{
+				System.out.println("취소..");
+				
+			}
+		}
+	}
+
+}

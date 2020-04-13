@@ -1,0 +1,23 @@
+package org.wonseok.view;
+
+import javax.swing.table.DefaultTableModel;
+
+public class ListView extends View {
+
+	public ListView() {
+		// TODO Auto-generated constructor stub
+		init();
+	}
+
+	@Override
+	public void init() {
+			DefaultTableModel dm = new DefaultTableModel(10,4);
+	}
+
+	@Override
+	public void start() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

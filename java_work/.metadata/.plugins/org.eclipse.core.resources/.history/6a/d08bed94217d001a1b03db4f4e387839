@@ -1,0 +1,7 @@
+package test.json;
+
+public class Ex01_1 {
+	public static void main(String[] args) {
+		
+	}
+}

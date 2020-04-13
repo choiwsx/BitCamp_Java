@@ -1,0 +1,42 @@
+package org.wonseok.controller;
+
+import java.util.Vector;
+
+import javax.swing.JOptionPane;
+
+import org.wonseok.model.Member;
+
+public class SearchController implements Controller{
+
+	public SearchController() {
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public void service() {
+		// TODO Auto-generated method stub
+		String name = nameField.getText();
+		String email = emailField.getText();
+		String phone = phoneField.getText();
+		Member dto = new Member(0,name,email,phone);
+		Vector<Vector> searchList = dao.search(dto);
+		System.out.println(searchList);
+		if(searchList!=null)
+		{
+			while(dm.getRowCount()>0)
+			{
+				dm.removeRow(0);
+			}
+			for(Vector rowData : searchList)
+			{
+				dm.addRow(rowData);
+			}
+		}
+		if(searchList.size()==0)
+		{
+			JOptionPane.showMessageDialog(null, "존재하지 않는 번호입니다, 다시 확인 후 진행하세요.", "경고",
+					JOptionPane.WARNING_MESSAGE);
+		}
+	}
+
+}

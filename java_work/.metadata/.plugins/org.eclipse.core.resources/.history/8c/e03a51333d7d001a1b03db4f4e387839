@@ -1,0 +1,63 @@
+package org.wonseok.controller;
+
+import java.util.Vector;
+
+public class ListController implements Controller {
+
+	public ListController() {
+		// TODO Auto-generated constructor stub
+	}
+
+
+	
+	
+	
+	
+	@Override
+	public void service() {
+		Vector<Vector> dataList = dao.selectAll();
+		
+		
+		if(dataList != null){
+			while(dm.getRowCount()>0)
+			{
+				dm.removeRow(0);
+				
+			}
+			
+			for(Vector rowData : dataList)
+			{
+				dm.addRow(rowData);
+			}
+		}
+
+		
+	}
+	
+	
+
+	
+	public void test() {
+		// TODO Auto-generated method stub
+		
+		Vector rowData = new Vector<>();
+		rowData.add(0);
+		rowData.add("test");
+		rowData.add("test3");
+		rowData.add("0101-3123");
+		
+		while(dm.getRowCount()>0)
+		{
+			dm.removeRow(0);
+			
+		}
+		
+		dm.addRow(rowData);
+		
+	}
+
+
+
+
+
+}

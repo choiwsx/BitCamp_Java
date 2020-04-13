@@ -1,0 +1,20 @@
+package test.json;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
+
+public class Ex_99_1 {
+	public static void main(String[] args) {
+		JSONObject student = new JSONObject();
+		JSONArray studentArr = new JSONArray();
+		student.put("name", "최원슥");
+		student.put("email", "won@naver.com");
+		student.put("phone", "00-11");
+		
+		studentArr.put(student);
+		student = new JSONObject();
+		student.put("name", "최원슥");
+		student.put("email", "won@naver.com");
+		student.put("phone", "00-11");
+	}
+}

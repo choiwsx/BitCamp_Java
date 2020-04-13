@@ -1,0 +1,25 @@
+package org.wonseok.view;
+
+import javax.swing.JLabel;
+
+public class TitleView extends View {
+
+	public TitleView() {
+		// TODO Auto-generated constructor stub
+		init();
+	}
+
+	@Override
+	public void init() {
+		// TODO Auto-generated method stub
+		JLabel title = new JLabel("::::::: Customer Mangement System ::::::::");
+		this.add(title);
+	}
+
+	@Override
+	public void start() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

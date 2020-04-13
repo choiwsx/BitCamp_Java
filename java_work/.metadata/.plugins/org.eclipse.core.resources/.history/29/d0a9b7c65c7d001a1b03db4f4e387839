@@ -1,0 +1,44 @@
+package org.wonseok.controller;
+
+import java.util.Vector;
+
+import javax.swing.JOptionPane;
+
+import org.wonseok.model.Member;
+
+public class DeleteController implements Controller {
+
+	public DeleteController() {
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public void service() {
+		// TODO Auto-generated method stub
+		String name = nameField.getText();
+		String email = emailField.getText();
+		String phone = phoneField.getText();
+		Member dto = new Member(0,name,email,phone);
+		Vector<Vector> searchList = dao.search(dto);
+		System.out.println(searchList);
+		if(searchList!=null)
+		{
+			while(dm.getRowCount()>0)
+			{
+				dm.removeRow(0);
+			}
+			for(Vector rowData : searchList)
+			{
+				dm.addRow(rowData);
+			}
+		}
+		else
+		{
+			System.out.println("출력 할 데이터가 없습니다.");
+		}
+		
+		String input = JOptionPane.showInputDialog("");
+		
+	}
+
+}

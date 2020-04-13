@@ -1,0 +1,25 @@
+package org.wonseok.view;
+
+import javax.swing.JButton;
+
+public class ButtonView extends View {
+	
+	public JButton allBtn = new JButton();
+	
+	public ButtonView() {
+		init();
+	}
+
+	@Override
+	public void init() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void start() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

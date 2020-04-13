@@ -1,0 +1,5 @@
+package org.wonseok.controller;
+
+public interface Controller extends R {
+	void service();
+}

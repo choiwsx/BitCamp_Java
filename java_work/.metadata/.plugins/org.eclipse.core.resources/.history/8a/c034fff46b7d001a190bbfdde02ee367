@@ -1,0 +1,83 @@
+{
+  "studentArr": [
+    {
+      "no": 4,
+      "phone": "산",
+      "name": "장",
+      "email": "발"
+    },
+    {
+      "no": 47,
+      "phone": "3",
+      "name": "1",
+      "email": "2"
+    },
+    {
+      "no": 50,
+      "phone": "3",
+      "name": "1",
+      "email": "2"
+    },
+    {
+      "no": 52,
+      "phone": "3",
+      "name": "1",
+      "email": "2"
+    },
+    {
+      "no": 54,
+      "phone": "3",
+      "name": "1",
+      "email": "2"
+    },
+    {
+      "no": 55,
+      "phone": "3",
+      "name": "1",
+      "email": "2"
+    },
+    {
+      "no": 56,
+      "phone": "3",
+      "name": "1",
+      "email": "2"
+    },
+    {
+      "no": 57,
+      "phone": "3",
+      "name": "1",
+      "email": "2"
+    },
+    {
+      "no": 58,
+      "phone": "3",
+      "name": "1",
+      "email": "2"
+    },
+    {
+      "no": 59,
+      "phone": "3",
+      "name": "1",
+      "email": "2"
+    },
+    {
+      "no": 60,
+      "phone": "3",
+      "name": "1",
+      "email": "2"
+    },
+    {
+      "no": 62,
+      "phone": "3",
+      "name": "1",
+      "email": "2"
+    },
+    {
+      "no": 64,
+      "phone": "3",
+      "name": "1",
+      "email": "2"
+    }
+  ],
+  "seq": 66
+}

@@ -1,0 +1,14 @@
+package org.wonseok.resource;
+
+import javax.swing.table.DefaultTableModel;
+
+import org.wonseok.view.ListView;
+
+public interface R {
+
+		DefaultTableModel dm = new DefaultTableModel(10,4); 
+	
+	
+		ListView listView = new ListView(dm);
+		
+}

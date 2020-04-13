@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+		<item value="C:\Users\user\Downloads\java_day20_project_"/>
+		<item value="C:\Users\user\Downloads\mini_project_jframe(1)"/>
 		<item value="E:\cws_work\java_work\java_Phone"/>
 		<item value="E:\cws_work\java_work\java_day12_phonbook4"/>
 		<item value="E:\cws_work\java_work\java_day12_phonbook"/>

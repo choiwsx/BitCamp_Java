@@ -1,0 +1,59 @@
+package org.wonseok.controller;
+
+import java.util.Vector;
+
+import javax.swing.JOptionPane;
+
+import org.wonseok.model.Member;
+
+public class DeleteController implements Controller {
+
+	public DeleteController() {
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public void service() {
+		// TODO Auto-generated method stub
+		String name = nameField.getText();
+		String email = emailField.getText();
+		String phone = phoneField.getText();
+		Member dto = new Member(0,name,email,phone);
+		Vector<Vector> searchList = dao.search(dto);
+		System.out.println(searchList);
+		if(searchList!=null)
+		{
+			while(dm.getRowCount()>0)
+			{
+				dm.removeRow(0);
+			}
+			for(Vector rowData : searchList)
+			{
+				dm.addRow(rowData);
+			}
+		}
+		else
+		{
+			System.out.println("출력 할 데이터가 없습니다.");
+		}
+		
+		String input = JOptionPane.showInputDialog("몇번의 "+dto.getName()+"을 지우시겠습니까?");
+		for(int i=0; i<searchList.size(); i++)
+		{
+			Vector v = new Vector<>();
+			v = searchList.get(i);
+			System.out.println(input);
+			System.out.println(v.get(0));
+			if(input.equals(v.get(0)))
+			{
+				System.out.println("같은거 발견");
+			}else
+			{
+				System.out.println("같은거 발견하지 못함");
+			}
+			
+		}
+		
+	}
+
+}

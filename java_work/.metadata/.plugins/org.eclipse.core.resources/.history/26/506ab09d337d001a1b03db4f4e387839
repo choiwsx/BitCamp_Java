@@ -1,0 +1,22 @@
+package org.wonseok.view;
+
+public class ListView extends View {
+
+	public ListView() {
+		// TODO Auto-generated constructor stub
+		init();
+	}
+
+	@Override
+	public void init() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void start() {
+		// TODO Auto-generated method stub
+
+	}
+
+}
