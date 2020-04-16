@@ -1,0 +1,35 @@
+{
+  "studentArr": [
+    {
+      "no": 1,
+      "phone": "3",
+      "name": "1",
+      "email": "2"
+    },
+    {
+      "no": 3,
+      "phone": "3",
+      "name": "2",
+      "email": "23"
+    },
+    {
+      "no": 7,
+      "phone": "3",
+      "name": "2",
+      "email": "23"
+    },
+    {
+      "no": 8,
+      "phone": "3",
+      "name": "2",
+      "email": "23"
+    },
+    {
+      "no": 9,
+      "phone": "3",
+      "name": "2",
+      "email": "23"
+    }
+  ],
+  "seq": 10
+}

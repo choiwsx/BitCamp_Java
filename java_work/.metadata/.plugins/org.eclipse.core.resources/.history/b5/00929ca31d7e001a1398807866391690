@@ -1,0 +1,12 @@
+package org.wonseok.view;
+
+import java.awt.LayoutManager;
+
+import javax.swing.JPanel;
+
+public abstract class View extends JPanel {
+
+	public abstract void display();
+	
+	
+}

@@ -1,7 +1,0 @@
-package org.wonseok.view;
-
-import org.wonseok.resource.R;
-
-public class View implements R {
-	void display();
-}

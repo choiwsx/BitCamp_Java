@@ -1,7 +1,0 @@
-package org.wonseok;
-
-public class WordQuiz {
-	public static void main(String[] args) {
-		
-	}
-}

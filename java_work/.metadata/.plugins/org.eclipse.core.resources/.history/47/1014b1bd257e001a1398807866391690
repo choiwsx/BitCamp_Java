@@ -1,0 +1,17 @@
+package org.wonseok.view;
+
+import javax.swing.JLabel;
+
+public class ButtonView extends View {
+
+	public ButtonView() {
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public void display() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

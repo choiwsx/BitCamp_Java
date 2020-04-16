@@ -1,0 +1,10 @@
+package org.wonseok.resource;
+
+import org.wonseok.view.TitleView;
+
+public interface R {
+
+	
+	
+	TitleView titleView = new TitleView();
+}

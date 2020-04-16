@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <typeInfoHistroy>
-<typeInfo handle="=Java_PhoneBookProject/src&lt;org.wonseok.view{View.java[View" modifiers="513" timestamp="1585876189833"/>
-<typeInfo handle="=Java_Day18/C:\/Program Files\/Java\/jre1.8.0_241\/lib\/rt.jar&lt;java.awt(Frame.class[Frame" modifiers="33" timestamp="1582777067608"/>
-<typeInfo handle="=Java_Day18/src&lt;org.wonseok{MyFrame.java[MyFrame" modifiers="1" timestamp="1586420957010"/>
 <typeInfo handle="=Java_Day19_windowbuilder/C:\/Program Files\/Java\/jre1.8.0_241\/lib\/rt.jar&lt;javax.swing.event(ListSelectionListener.class[ListSelectionListener" modifiers="1537" timestamp="1582777067608"/>
 <typeInfo handle="=Java_Day19_windowbuilder/C:\/Program Files\/Java\/jre1.8.0_241\/lib\/rt.jar&lt;javax.swing(ListModel.class[ListModel" modifiers="1537" timestamp="1582777067608"/>
-<typeInfo handle="=Java_Day19_windowbuilder/C:\/Program Files\/Java\/jre1.8.0_241\/lib\/rt.jar&lt;javax.swing(JFrame.class[JFrame" modifiers="33" timestamp="1582777067608"/>
 <typeInfo handle="=Java_Day20_proj_1/C:\/Program Files\/Java\/jre1.8.0_241\/lib\/rt.jar&lt;javax.swing.text(View.class[View" modifiers="1057" timestamp="1582777067608"/>
-<typeInfo handle="=Java_Day20_proj_1/src&lt;org.wonseok.view{View.java[View" modifiers="1025" timestamp="1586746903658"/>
+<typeInfo handle="=Java_Day20_proj_1/src&lt;org.wonseok.view{View.java[View" modifiers="1025" timestamp="1586773475605"/>
 <typeInfo handle="=Java_Day20_proj_1/C:\/Program Files\/Java\/jre1.8.0_241\/lib\/rt.jar&lt;java.awt.event(ActionListener.class[ActionListener" modifiers="1537" timestamp="1582777067608"/>
 <typeInfo handle="=Java_Day20_proj_1/src&lt;org.wonseok.controller{Controller.java[Controller" modifiers="513" timestamp="1586746073757"/>
+<typeInfo handle="=Java_MVC_pratice/src&lt;org.wonseok.view{View.java[View" modifiers="1025" timestamp="1586774035798"/>
+<typeInfo handle="=Java_0414_proj/src&lt;org.comstudy21.controller{Controller.java[Controller" modifiers="513" timestamp="1586746069909"/>
+<typeInfo handle="=Mini_project/C:\/Program Files\/Java\/jre1.8.0_241\/lib\/rt.jar&lt;javax.swing(JPanel.class[JPanel" modifiers="33" timestamp="1582777067608"/>
+<typeInfo handle="=Java_Day19_windowbuilder/C:\/Program Files\/Java\/jre1.8.0_241\/lib\/rt.jar&lt;javax.swing(JFrame.class[JFrame" modifiers="33" timestamp="1582777067608"/>
+<typeInfo handle="=Mini_project/src&lt;org.wonseok.view{View.java[View" modifiers="1025" timestamp="1586850216221"/>
+<typeInfo handle="=Mini_project/src&lt;org.wonseok.controller{Controller.java[Controller" modifiers="513" timestamp="1586851505361"/>
 </typeInfoHistroy>

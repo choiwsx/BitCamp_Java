@@ -1,0 +1,9 @@
+package my_jdbc_test;
+
+public class Text {
+
+	public Text() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

@@ -1,0 +1,30 @@
+package org.wonseok.db_select;
+
+import java.beans.Statement;
+import java.sql.Connection;
+import java.sql.SQLException;
+
+import org.wonseok.Test_jdbc;
+
+public class DbSelectEx {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Connection conn = Test_jdbc.getConnection();
+
+		Statement stmt = null;
+		try {
+							stmt = conn.createStatement();
+				
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+}

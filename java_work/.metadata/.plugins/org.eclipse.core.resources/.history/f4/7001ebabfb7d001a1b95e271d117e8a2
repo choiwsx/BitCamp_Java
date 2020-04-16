@@ -1,0 +1,9 @@
+package org.comstudy21.evt_handler;
+
+public class MouseEvtHandler {
+
+	public MouseEvtHandler() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

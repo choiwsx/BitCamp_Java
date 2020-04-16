@@ -1,0 +1,15 @@
+package org.wonseok.view;
+
+public class ButtonView extends View {
+
+	public ButtonView() {
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public void display() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,25 @@
+package org.wonseok;
+
+public class Test_jdbc {
+
+	
+	
+	
+	public Test_jdbc() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	public static void main(String[] args) {
+		//드라이버 불러오기
+		try {
+			Class.forName("org.h2.Driver");
+			System.out.println("드라이버 검색 성공!");
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			System.out.println("드라이버 검색 실패!");
+			e.printStackTrace();
+		}
+	}
+
+
+}

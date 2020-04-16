@@ -1,0 +1,15 @@
+package org.wonseok.view;
+
+import javax.swing.JFrame;
+
+import org.wonseok.resource.R;
+
+public class MainFrame extends JFrame implements R{
+
+	public MainFrame() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	
+
+}

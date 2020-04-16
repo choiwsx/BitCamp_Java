@@ -1,0 +1,20 @@
+package org.wonseok.db_select;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+
+import org.wonseok.Test_jdbc;
+
+public class DbUpdateEx {
+	public static Connection conn =  Test_jdbc.getConnection();
+	public static PreparedStatement pstmt;
+	public static String sql = "UPDATE MEMBERS SET NAME=?, EMAIL=?, PHONE=? "+"WHERE NO=?";
+	
+	public static void main(String[] args) {
+		
+	pstmt = conn.prepareStatement(sql);
+		
+	}
+	
+	
+}

@@ -1,0 +1,14 @@
+package my_jdbc_test;
+
+public class Text {
+
+	public Text() {
+		// TODO Auto-generated constructor stub
+	}
+
+	
+	public static void main(String[] args) {
+		Class.forName("org.h2.Driver");
+		
+	}
+}

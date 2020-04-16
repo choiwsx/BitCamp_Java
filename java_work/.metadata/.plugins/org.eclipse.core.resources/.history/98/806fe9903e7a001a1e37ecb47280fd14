@@ -1,8 +1,0 @@
-package org.wonseok.calc;
-
-import org.wonseok.MyFrame;
-
-public class MyCalc extends MyFrame{
-
-	
-}

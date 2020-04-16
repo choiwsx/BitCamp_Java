@@ -1,0 +1,18 @@
+package org.wonseok.db_select;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+
+import org.wonseok.Test_jdbc;
+
+public class DbInsertEx {
+	public static Connection conn =  Test_jdbc.getConnection();
+	public static PreparedStatement pstmt;
+	public static String sql = "INSERT INTO MEMBERS VALUES(?,?,?)";
+	
+	
+	
+	public static void main(String[] args) {
+		
+	}
+}

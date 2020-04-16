@@ -1,0 +1,9 @@
+package org.wonseok.view;
+
+public abstract class View {
+
+	public View() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

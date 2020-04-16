@@ -1,0 +1,10 @@
+package org.wonseok.db_select;
+
+public class DbSelectEx {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

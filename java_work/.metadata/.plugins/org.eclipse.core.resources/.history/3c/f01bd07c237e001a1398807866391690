@@ -1,0 +1,29 @@
+package org.wonseok.view;
+
+import java.awt.Color;
+
+import javax.swing.JLabel;
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
+import javax.swing.table.DefaultTableModel;
+
+import org.wonseok.resource.R;
+
+public class ListView extends View{
+
+	public ListView() {
+		// TODO Auto-generated constructor stub
+	
+		JTable table = new JTable(dm);
+		JScrollPane scrollPane = new JScrollPane(table);
+		add(scrollPane);
+	}
+
+	@Override
+	public void display() {   
+		// TODO Auto-generated method stub
+		add(new JLabel("hello"));
+		setBackground(Color.pink);
+	}
+
+}

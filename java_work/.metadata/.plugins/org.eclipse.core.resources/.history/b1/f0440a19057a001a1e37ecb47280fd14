@@ -1,7 +1,0 @@
-package org.wonseok;
-
-import java.awt.Frame;
-
-public class MyFrame extends Frame {
-
-}

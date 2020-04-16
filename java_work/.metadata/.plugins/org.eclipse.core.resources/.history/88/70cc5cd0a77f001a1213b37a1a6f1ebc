@@ -1,0 +1,44 @@
+package org.wonseok.db_select;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+import org.wonseok.Test_jdbc;
+
+public class DbInsertEx {
+	public static Connection conn =  Test_jdbc.getConnection();
+	public static PreparedStatement pstmt;
+	public static String sql = "INSERT INTO MEMBERS VALUES(?,?,?)";
+	
+	
+	
+	public static void main(String[] args) {
+		
+		String name = "TEST1";
+		String email = "test1@shop.com";
+		String phone = "010-5555-5555";	
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, name);
+			pstmt.setString(2, email);
+			pstmt.setString(3, phone);
+			int cnt = pstmt.executeUpdate();
+			if(cnt>0)
+			{
+				System.out.println("입력성공");
+			}else
+			{
+				System.out.println("입력 실패");
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally
+		{
+			
+		}
+		
+	}
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;data.json&apos; to &apos;Mini_project/src/org.wonseok.resource&apos;&#x0D;&#x0A;- Original project: &apos;mini_project_jframe&apos;&#x0D;&#x0A;- Destination element: &apos;Mini_project/src/org.wonseok.resource&apos;&#x0D;&#x0A;- Original element: &apos;data.json&apos;" description="Copy file" destination="=Mini_project/src&lt;org.wonseok.resource" element1="src/org/comstudy21/resource/data.json" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1586853791982" units="0" version="1.0"/>
+</session>

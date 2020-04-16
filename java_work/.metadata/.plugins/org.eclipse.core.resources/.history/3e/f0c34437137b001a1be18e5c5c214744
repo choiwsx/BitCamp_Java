@@ -1,7 +1,0 @@
-package org.wonseok.resource;
-
-import java.util.Scanner;
-
-public class R {
-	Scanner scan = new Scanner(System.in);
-}

@@ -1,0 +1,9 @@
+package org.comstudy21.controller;
+
+public class DeleteController {
+
+	public DeleteController() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

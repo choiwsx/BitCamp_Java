@@ -1,0 +1,24 @@
+package org.wonseok.model;
+
+import java.util.Vector;
+
+public class Dao {
+
+	public Dao() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public Vector<Vector> selectAll() {
+		// TODO Auto-generated method stub
+		Vector<Vector> vector = new Vector<>();
+		
+		Vector v = new Vector<>();
+		v.add(1);
+		v.add("1");
+		v.add("1");
+		v.add("1");
+		vector.add(v);
+		return vector;
+	}
+
+}

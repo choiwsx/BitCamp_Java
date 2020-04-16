@@ -1,0 +1,30 @@
+package org.wonseok.view;
+
+import javax.swing.JTable;
+import javax.swing.table.DefaultTableModel;
+
+public class ListView extends View{
+
+	DefaultTableModel dm;
+	JTable table;
+	
+	public ListView(DefaultTableModel dm, Object[] colNames) {
+		// TODO Auto-generated constructor stub
+		this.dm = dm;
+		dm.setColumnIdentifiers(colNames);
+		init();
+	}
+
+	@Override
+	public void init() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void start() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}
