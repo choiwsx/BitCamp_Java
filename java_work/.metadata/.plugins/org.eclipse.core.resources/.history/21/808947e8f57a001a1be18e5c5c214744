@@ -1,7 +1,0 @@
-package org.wonseok.swing;
-
-import javax.swing.JFrame;
-
-public class RadioBtnExam extends JFrame {
-
-}

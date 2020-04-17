@@ -1,7 +1,0 @@
-package org.wonseok.jtable;
-
-public class JtableExam {
-	public static void main(String[] args) {
-		
-	}
-}
