@@ -112,7 +112,6 @@ class MoveCh extends JFrame {
 	}
 	public void createB(int dir) {
 		JLabel bb = new JLabel(bImage);
-		System.out.println("총알발사");
 		bb.setLocation(la.getLocation());
 		bb.setSize(20, 20);
 		contentpane.add(bb);
@@ -138,29 +137,25 @@ class MoveCh extends JFrame {
 					for (int i = 0; i < stage1.length; i++) {
 						if ((stage1[i].getX() - 10 <= bb.getX() && bb.getX() <= stage1[i].getX() + 10)
 								&& (stage1[i].getY() - 10 <= bb.getY() && bb.getY() <= stage1[i].getY() + 10)) {
-							System.out.println("충돌");
+//							System.out.println("충돌");
 //							if(Monster.get(i) != null){
 //								Monster.remove(i);
 //							}
-
-							contentpane.remove(bb);
 							
-						
+							contentpane.remove(bb);
 							contentpane.remove(stage1[i]);
 							contentpane.repaint();
-//							Container parent = la.getParent();
-//							Component[] checkcount = parent.getComponents();
-//							for(int j=0; j<checkcount.length; j++)
-//							{
-//								if(checkcount[j] instanceof JLabel)
-//								{
-//									System.out.println("제라벨");
-//								}
-//							}
+							
+							Container parent = la.getParent();
+							Component[] checkcount = parent.getComponents();
+							for(int j=0; j<checkcount.length; j++)
+							{
+								System.out.println(checkcount[i].getName());
+							}
+							
 //							System.out.println(Monster.size());
 //							score++;
 //							System.out.println(stage1.length);
-							
 							
 //							checkMonster();
 						}

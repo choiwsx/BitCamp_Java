@@ -2,11 +2,13 @@ package org.wonseok;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
+import java.awt.Component;
 import java.awt.Container;
 import java.awt.Frame;
 import java.awt.Graphics;
 import java.awt.GridLayout;
 import java.awt.Image;
+import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
@@ -21,236 +23,334 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.Timer;
 
-class Enemy {
-	int x;
-	int y;
 
-	int speed;
 
-	public Enemy(int x, int y, int speed) {
-		// TODO Auto-generated constructor stub
-		this.x = x;
-		this.y = y;
-		this.speed = speed;
-	}
 
-	public void move() {
-		x += (int) (Math.random() * 1000);
-		y += (int) (Math.random() * 1000);
-	}
-}
-
-class MoveCh2 extends JFrame implements Runnable {
+class MoveCh2 extends JFrame implements Runnable, KeyListener {
 
 	final int windowX = 1000;
 	final int windowY = 1000;
 	final int monsterMoveRadius = 20;
 	final int bulletSpped = 10;
-
+	
+	boolean KeyUp = false;
+	boolean KeyDown = false;
+	boolean KeyLeft = false;
+	boolean KeyRight = false;
+	boolean KeySpace = false;
+	
 	JFrame mainFrame;
 	JPanel mainPane = new JPanel();
 	JPanel contentpane = new JPanel();
 	JPanel scorepane = new JPanel();
-	ImageIcon image1 = new ImageIcon("src/image/bullet.jpg"); // 주인공 이미지
-	ImageIcon bImage = new ImageIcon("src/image/bullet2.jpg"); // 총알 이미지
-	ImageIcon enemy1 = new ImageIcon("src/image/enemy2.gif");
 	Icon icon = new ImageIcon("src/image/enemy3.gif");
-	JLabel la = new JLabel(image1, JLabel.CENTER);
-	JLabel bulletL = new JLabel(bImage, JLabel.CENTER);
 	JLabel enemy = new JLabel(icon);
 	
-	Thread th;
+	Image playerImg;
+	Image enemyImg;
+	Image rocketImg;
+	
+	
 	int direct = 0;
-
+	
 	Timer bulletTimer = null;
-
+	
 	int score = 0;
-
+	
 	JLabel[] stage1 = new JLabel[3];
 	JLabel scoreLabel = new JLabel("점수 : " + score);
+	
 
-	ArrayList enemy_List = new ArrayList();
-	ArrayList bullet_List = new ArrayList();
-	//
-
-	Enemy en;
-
+	ArrayList<Enemy> enemies = new ArrayList<Enemy>();
+	ArrayList<Rocket> rockets = new ArrayList<Rocket>();
+	
+	Thread th;
+	
 	Image buffImage;
 	Graphics buffg;
-
-//	public void createEnemy(int stage) {
-//		for (int i = 0; i < stage1.length; i++) {
-//			int ranx = (int) (Math.random() * windowX - 50);
-//			int rany = (int) (Math.random() * windowY - 50);
-//			stage1[i] = new JLabel(icon);
-//			stage1[i].setLocation(ranx, rany);
-//			stage1[i].setSize(40, 40);
-//			contentpane.add(stage1[i]);
-//		}
-//	}
-
-	public void enemyMove(JLabel monster) {
-		monster.setLocation(monster.getX() + (int) (Math.random() * monsterMoveRadius),
-				monster.getY() + (int) (Math.random() * monsterMoveRadius));
-	}
-
-//	Timer timer = new Timer(500, new ActionListener() {
-//		@Override
-//		public void actionPerformed(ActionEvent e) {
-//			for (int i = 0; i < stage1.length; i++) {
-//				enemyMove(stage1[i]);
-//			}
-//		}
-//	});
-
+	int px,py;
+	int MonsterCount = 10;
+	int cnt=0;
 	final int FLYING_UNIT = 10;
-
 	public MoveCh2() {
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setContentPane(mainPane);
-		mainPane.setLayout(new BorderLayout());
-		la.setLocation(250, 250);
-		la.setSize(20, 20);
-		// createEnemy(1);
-		contentpane.add(la);
+		init();
 		th = new Thread(this);
 		th.start();
-//		timer.start();
+		setContentPane(mainPane);
+		mainPane.setLayout(new BorderLayout());
 		contentpane.setSize(windowX, windowY);
-		// contentpane.backg
 		scorepane.setSize(300, windowY);
-		this.setSize(windowX + 300, windowY);
+		this.setSize(windowX+300, windowY);
 		this.setVisible(true);
-		mainPane.addKeyListener(new MyKeyListener());
-		mainPane.requestFocus();
+		addKeyListener(this);
 		mainPane.add(contentpane, BorderLayout.CENTER);
 		scorepane.add(scoreLabel);
-		mainPane.add(scorepane, BorderLayout.EAST);
+		mainPane.add(scorepane,BorderLayout.EAST);
+	}
+	
+	public void init()
+	{
+		px = 300;
+		py = 300;
+		playerImg = new ImageIcon("src/image/bullet.jpg").getImage();
+		enemyImg = new ImageIcon("src/image/enemy1.gif").getImage();
+		rocketImg = new ImageIcon("src/image/bullet2.jpg").getImage();
+	}
+	
+	void makeEnemy()
+	{
+		enemies.add(new Enemy(enemyImg, (int) (Math.random() *500)+50, (int) (Math.random() * 500)+50));
+		
+	}
+	
+	@Override
+	public void paint(Graphics g) {
+		buffImage = createImage(800, 800);
+		buffg = buffImage.getGraphics();
+		update(g);
+	}
+	
+	@Override
+	public void update(Graphics g) {
+		drawEnemy();
+		drawPlayer();
+		drawRocket();
+		g.drawImage(buffImage, 0, 0, this);
+	}
+	
+	public void drawPlayer()
+	{
+		buffg.drawImage(playerImg, px, py, this);
+	}
+	
+	public void drawEnemy() {
+		for(int i=0; i<enemies.size(); i++)
+		{
+			Enemy e = (Enemy)enemies.get(i);
+			buffg.drawImage(enemyImg, e.x, e.y, this);
+
+		}
+	}
+	public void drawRocket()
+	{
+		for(int i=0; i<rockets.size(); i++)
+		{
+			Rocket r = (Rocket)rockets.get(i);
+			buffg.drawImage(rocketImg, r.x, r.y, this);
+		}
 	}
 
-	public void createB(int dir) {
-		JLabel bb = new JLabel(bImage);
-		System.out.println("총알발사");
-		bb.setLocation(la.getLocation());
-		bb.setSize(20, 20);
-		contentpane.add(bb);
-		ActionListener bulletAction = null;
-		bulletTimer = new Timer(50, new ActionListener() {
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				if (bb.isEnabled()) {
-					switch (dir) {
-					case 1:
-						bb.setLocation(bb.getX(), bb.getY() - 10);
-						break;
-					case 2:
-						bb.setLocation(bb.getX(), bb.getY() + 10);
-						break;
-					case 3:
-						bb.setLocation(bb.getX() + 10, bb.getY());
-						break;
-					case 4:
-						bb.setLocation(bb.getX() - 10, bb.getY());
-						break;
-					}
-					for (int i = 0; i < stage1.length; i++) {
-						if ((stage1[i].getX() - 20 <= bb.getX() && bb.getX() <= stage1[i].getX() + 20)
-								&& (stage1[i].getY() - 20 <= bb.getY() && bb.getY() <= stage1[i].getY() + 20)) {
-							System.out.println("충돌");
-
-							Container parent = la.getParent();
-							contentpane.remove(bb);
-							contentpane.remove(stage1[i]);
-							contentpane.repaint();
-							// score++;
-							// System.out.println(stage1.length);
-
-							// checkMonster();
+	public void RocketP()
+	{
+		if(KeySpace)
+		{
+			Rocket r = new Rocket(rocketImg, px, py, direct);
+			rockets.add(r);
+			
+		}
+		for(int i=0; i<rockets.size(); i++)
+		{
+			Rocket r = (Rocket)rockets.get(i);
+			r.move();
+			if(r.x<0||r.x>800||r.y<20||r.y>800)
+			{
+				rockets.remove(i);
+			}
+			for(int j=0; j<enemies.size(); j++)
+			{
+				Enemy e = (Enemy)enemies.get(j);
+				
+				if(Math.abs(r.x-e.x)<20&&Math.abs(r.y-e.y)<20)
+					{
+						rockets.remove(i);
+						enemies.remove(j);
+						if(enemies.size()==0)
+						{
+							System.out.println("다음 스테이지로~");
 						}
 					}
-				}
-				if (bb.getX() < 0 || bb.getX() > windowX || bb.getY() < 0 || bb.getY() > windowY) {
-					contentpane.remove(bb);
-				}
 			}
-		});
-		bulletTimer.start();
-	}
-
-	class MyKeyListener implements KeyListener {
-		@Override
-		public void keyPressed(KeyEvent e) {
-			int keyCode = e.getKeyCode();
-			switch (keyCode) {
-			case KeyEvent.VK_UP:
-				la.setLocation(la.getX(), la.getY() - FLYING_UNIT);
-				direct = 1;
-				break;
-			case KeyEvent.VK_DOWN:
-				la.setLocation(la.getX(), la.getY() + FLYING_UNIT);
-				direct = 2;
-				break;
-			case KeyEvent.VK_RIGHT:
-				la.setLocation(la.getX() + FLYING_UNIT, la.getY());
-				direct = 3;
-				break;
-			case KeyEvent.VK_LEFT:
-				la.setLocation(la.getX() - FLYING_UNIT, la.getY());
-				direct = 4;
-				break;
-			case KeyEvent.VK_SPACE:
-				createB(direct);
-				break;
-			}
-		}
-
-		@Override
-		public void keyReleased(KeyEvent e) {
-		}
-
-		@Override
-		public void keyTyped(KeyEvent e) {
 		}
 	}
 
 	@Override
 	public void run() {
 		try {
-			while (true) {
-				EnemyThread();
+			while(true)
+			{
+				while(cnt<MonsterCount) {
+					makeEnemy();
+					cnt++;
+				}
+				moveEnemy();
+				KeyProcess();
+				RocketP();
 				repaint();
-				Thread.sleep(20);
-
+				Thread.sleep(50);
 			}
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+		}catch(Exception e)
+		{
+			
 		}
-
 	}
+	public void moveEnemy()
+	{
 
-	public void EnemyThread() {
-		if (enemy_List.size() == 0) {
-			for (int i = 0; i < 5; i++) {
-				en = new Enemy((int) (Math.random() * 1000), (int) (Math.random() * 1000), 10);
-				enemy_List.add(en);
-			}
-		} else {
-			for (int i = 0; i < enemy_List.size(); i++) {
-				en = (Enemy) enemy_List.get(i);
-				en.move();
-			}
+		for(int i=0; i<enemies.size(); i++)
+		{
+			Enemy e = enemies.get(i);
+			e.move();
+		
 		}
 	}
 	
 	@Override
-	public void paint(Graphics g) {
-		buffImage = createImage(, height)
+	public void keyPressed(KeyEvent e) {
+		// TODO Auto-generated method stub
+		switch(e.getKeyCode()){
+		case KeyEvent.VK_UP :
+		KeyUp = true;
+		direct = 1;
+		break;
+		case KeyEvent.VK_DOWN :
+		KeyDown = true;
+		direct = 2;
+		break;
+		case KeyEvent.VK_LEFT :
+		KeyLeft = true;
+		direct = 4;
+		break;
+		case KeyEvent.VK_RIGHT :
+		KeyRight = true;
+		direct = 3;
+		break;
+
+		case KeyEvent.VK_SPACE :
+		KeySpace = true;
+		break;
+		}
+		
+	}
+
+	@Override
+	public void keyReleased(KeyEvent e) {
+		// TODO Auto-generated method stub
+		switch(e.getKeyCode()){
+		case KeyEvent.VK_UP :
+		KeyUp = false;
+		break;
+		case KeyEvent.VK_DOWN :
+		KeyDown = false;
+		break;
+		case KeyEvent.VK_LEFT :
+		KeyLeft = false;
+		break;
+		case KeyEvent.VK_RIGHT :
+		KeyRight = false;
+		break;
+
+		case KeyEvent.VK_SPACE :
+		KeySpace = false;
+		break;
+
+		}
+		
+	}
+	public void KeyProcess() {
+		if (KeyUp == true) {
+			if (py > 40)
+				py -= 5;
+		}
+		if (KeyDown == true) {
+			if (py + playerImg.getHeight(null) < 800)
+				py += 5;
+		}
+		if (KeyLeft == true) {
+			if (px > 0)
+				px -= 5;
+		}
+		if (KeyRight == true) {
+			if (px + playerImg.getWidth(null) < 800)
+				px += 5;
+		}
+	}
+	@Override
+	public void keyTyped(KeyEvent arg0) {
+		
 	}
 
 }
 
-public class Test2 {
+class Rocket
+{
+	Image img;
+	int x,y,w,h;
+	int width, height;
+	int dir;
+	public Rocket(Image rocketImg, int x, int y, int dir) {
+		this.x = x;
+		this.y = y;
+		this.img = rocketImg;
+		this.dir = dir;
+	}
+	public void move()
+	{
+		switch(dir)
+		{
+		case 1:
+			this.y -= 10;
+			break;
+		case 2:
+			this.y += 10;
+			break;
+		case 3:
+			this.x += 10;
+			break;
+		case 4:
+			this.x -= 10;
+			break;
+		}
+	}
+}
+
+class Enemy{
+	Image img;
+	int x,y, w, h;
+	int width, height;
+	public Enemy(Image enemyImg, int i, int j) {
+		this.x = i;
+		this.y = j;
+		this.img = enemyImg;
+	}
+	public void move() {
+		int ran = (int)(Math.random()*2);
+		int tmpx,tmpy;
+		if(ran==1) {
+			tmpx = this.x + (int) (Math.random() * 10); 
+			tmpy = this.y + (int) (Math.random() * 10);
+		}
+		else
+		{
+			tmpx = this.x - (int) (Math.random() * 10); 
+			tmpy = this.y - (int) (Math.random() * 10);
+		}
+		if(tmpx<800&&tmpy<800&&tmpx>0&&tmpy>40)
+		{
+			this.x = tmpx;
+			this.y = tmpy;
+		}
+		else
+		{
+			move();
+		}
+	}
+}
+
+
+
+
+public class Test2 extends Thread{
 
 	public static void main(String[] args) {
 		new MoveCh2();
