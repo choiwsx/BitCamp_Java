@@ -1,0 +1,5 @@
+package org.wonseok;
+
+public class Player {
+	String name;
+}

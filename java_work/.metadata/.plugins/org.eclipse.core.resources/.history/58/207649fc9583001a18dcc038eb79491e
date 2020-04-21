@@ -1,0 +1,5 @@
+package org.wonseok.q2;
+
+public class MyVectorTest {
+	MyVectorTest m = new MyVectorTest();
+}

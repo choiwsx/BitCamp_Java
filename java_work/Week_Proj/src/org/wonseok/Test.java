@@ -101,13 +101,12 @@ class MoveCh extends JFrame {
 		timer.start();
 		contentpane.setSize(windowX, windowY);
 //		contentpane.backg
-		scorepane.setSize(300, windowY);
 		this.setSize(windowX+300, windowY);
 		this.setVisible(true);
 		mainPane.addKeyListener(new MyKeyListener());
 		mainPane.requestFocus();
 		mainPane.add(contentpane, BorderLayout.CENTER);
-		scorepane.add(scoreLabel);
+		contentpane.setVisible(true);
 		mainPane.add(scorepane,BorderLayout.EAST);
 	}
 	public void createB(int dir) {

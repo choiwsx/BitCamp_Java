@@ -1,0 +1,67 @@
+package org.wonseok;
+
+import java.awt.EventQueue;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.Statement;
+
+import javax.swing.JFrame;
+import javax.swing.JScrollPane;
+import java.awt.BorderLayout;
+import javax.swing.JTabbedPane;
+import javax.swing.JTable;
+
+public class EndFrame {
+
+	private JFrame frame;
+	private JTable table;
+	
+	Connection conn = Test_jdbc.getConnection();
+	Statement stmt = null;
+	ResultSet rs = null;
+	String sql = "SELECT * FROM PLAYER";
+	
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					EndFrame window = new EndFrame();
+					window.frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the application.
+	 */
+	public EndFrame() {
+		initialize();
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		frame = new JFrame();
+		frame.setBounds(100, 100, 800, 800);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setLocationRelativeTo(null);
+		
+		JScrollPane scrollPane = new JScrollPane();
+		frame.getContentPane().add(scrollPane, BorderLayout.CENTER);
+		
+		table = new JTable();
+		scrollPane.setViewportView(table);
+		
+		stmt = conn.createStatement();
+		rs = stmt.executeQuery(sql);
+		
+	}
+
+}

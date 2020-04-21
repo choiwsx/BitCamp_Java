@@ -1,0 +1,81 @@
+package org.wonseok.q2;
+
+public class MyVector {
+	//Object배열 objArr 변수
+	Object[] objArr;
+	
+	//객체배열에 저장된 객체의 개수를 저장하기 위한 변수
+	int size = 0;
+	
+	
+	int capacity;
+	
+	//기본 생성자 capacity=16;
+	public MyVector() {
+		this(16);
+	}
+	
+	//capacity를 매개변수로 받는 생성자.
+	public MyVector(int capacity)
+	{
+		this.capacity = capacity;
+		objArr = new Object[this.capacity];
+	}
+	
+	//size의 변수값을 반환함.
+	public int size()
+	{
+		return size;
+	}
+	
+	//배열 objArr의 길이를 반환하는 메서드
+	public int capacity()
+	{
+		return this.capacity;
+	}
+	
+	//객체 배열이 비었는지 확인하는 메서드
+	boolean isEmpty()
+	{
+		if(size()==0)
+		{
+			System.out.println("객체배열이 비어있습니다.");
+			return true;
+		}
+		else{
+			System.out.println("객체배열이 비어있지 않습니다.");
+			return false;
+		}
+	}
+	
+	
+	//객체 배열 objArr에 객체를 추가하는 메서드
+	public void add(Object obj)
+	{
+		int idx = size(); //
+		if(this.capacity>idx){
+			objArr[idx] = obj;
+			this.size++;
+		}
+	}
+	
+	
+	//objArr에 저장된 객체를 반환.
+	public Object get(int index)
+	{
+		return objArr[index];
+	}
+	
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		for(Object o : objArr)
+		{
+			return o.toString();
+		}
+		return null;
+	}
+	
+	
+	
+}

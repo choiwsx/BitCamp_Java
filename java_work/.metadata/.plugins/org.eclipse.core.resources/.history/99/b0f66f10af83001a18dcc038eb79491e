@@ -1,0 +1,48 @@
+package org.wonseok.q2;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class MVtest {
+
+	
+	int bingoCheck(int[][] arr)
+	{
+		int cnt = 0;
+		boolean colCheck = false;
+		boolean rowCheck = false;
+		for(int i=0; i<arr.length; i++)
+		{
+			for(int j=0; j<arr[i].length; j++)
+			{
+				colCheck = false;
+				rowCheck = false;
+				if(arr[i][j]=='0')
+					colCheck = true;
+				if(arr[j][i]=='0')
+					rowCheck = true;
+			}
+			if(!colCheck)
+				cnt++;
+		}
+		for(int i)
+		
+		return cnt;
+	}
+	
+	@Test
+	public void test() {
+
+		int[][] arr = {
+				{1,1,1,1,1},
+				{1,1,1,1,1},
+				{1,1,1,1,1},
+				{1,1,1,1,1},
+				{1,1,1,1,1}
+		};
+	
+		assertTrue(bingoCheck(arr)==5);
+	}
+
+}

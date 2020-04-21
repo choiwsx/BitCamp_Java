@@ -1,0 +1,14 @@
+package org.wonseok;
+
+public class PointTest {
+	public static void main(String[] args) {
+		Point p = new Point(3,5);
+		System.out.println(p.toString());
+		Point p2 = new Point(2,5);
+		System.out.println(p.getDistance(p2));
+		System.out.println(Point.getDistance(p, p2));
+		System.out.println(p.equals(p2));
+//		Point3D p3 = new Point3D();
+
+	}
+}

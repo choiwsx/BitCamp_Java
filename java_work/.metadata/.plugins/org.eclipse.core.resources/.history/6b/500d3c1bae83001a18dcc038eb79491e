@@ -1,0 +1,31 @@
+package org.wonseok.q2;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class MVtest {
+
+	
+	int bingoCheck(int[][] arr)
+	{
+		int cnt =0;
+		
+		return cnt;
+	}
+	
+	@Test
+	public void test() {
+
+		int[][] arr = {
+				{1,1,1,1,1},
+				{1,1,1,1,1},
+				{1,1,1,1,1},
+				{1,1,1,1,1},
+				{1,1,1,1,1}
+		};
+	
+		assertTrue(bingoCheck(arr)==12);
+	}
+
+}

@@ -1,0 +1,24 @@
+package org.wonseok.q2;
+
+public class MyVector {
+	//Object배열 objArr 변수
+	Object[] objArr;
+	
+	//객체배열에 저장된 객체의 개수를 저장하기 위한 변수
+	int size;
+	
+	
+	
+	
+	
+	//기본 생성자 capacity=16;
+	public MyVector() {
+		this(16);
+	}
+
+	//capacity를 매개변수로 받는 생성자.
+	public MyVector(int capacity)
+	{
+		
+	}
+}

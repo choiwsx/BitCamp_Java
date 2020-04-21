@@ -1,0 +1,27 @@
+package org.wonseok.q2;
+
+class Test {
+	int x ;
+	public Test() {
+		this.x = 1;
+	}
+}
+
+public class MyVectorTest {
+	public static void main(String[] args) {
+		MyVector mv = new MyVector();
+		mv.add(2);
+		mv.add("문자열");
+		
+		Test t = new Test();
+		mv.add(obj);
+		
+		System.out.println(mv.size);
+		System.out.println(mv.capacity);
+		System.out.println(mv.isEmpty());
+	
+//		System.out.println(mv.get(2));
+	
+	
+	}
+}

@@ -1,0 +1,17 @@
+package org.wonseok.controller;
+
+
+public class TT {
+
+	boolean isNumber(String str) {
+		if()
+			return true;
+		
+		return false;
+	}
+	public static void main(String[] args) {
+		String str = "123";
+		System.out.println(isNumber(str));
+	}
+
+}

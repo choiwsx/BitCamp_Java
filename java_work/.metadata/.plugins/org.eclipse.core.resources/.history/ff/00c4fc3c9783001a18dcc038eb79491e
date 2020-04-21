@@ -1,0 +1,10 @@
+package org.wonseok.q2;
+
+public class MyVectorTest {
+	public static void main(String[] args) {
+		MyVectorTest m = new MyVectorTest();
+	
+		
+		
+	}
+}

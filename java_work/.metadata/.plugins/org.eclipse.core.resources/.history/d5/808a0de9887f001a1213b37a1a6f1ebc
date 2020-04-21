@@ -1,9 +1,0 @@
-package my_jdbc_test;
-
-public class MyJdbc {
-
-	public MyJdbc() {
-		// TODO Auto-generated constructor stub
-	}
-
-}

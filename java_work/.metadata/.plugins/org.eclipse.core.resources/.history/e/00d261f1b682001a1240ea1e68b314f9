@@ -1,0 +1,16 @@
+package org.wonseok.controller;
+
+
+public class TT {
+
+	public static void main(String[] args) {
+		Thread th;
+		th = new Thread();
+		th.start();
+		new Runnable() {
+			public void run() {
+				
+			}
+		}
+	}
+}

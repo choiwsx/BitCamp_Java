@@ -1,0 +1,8 @@
+package org.wonseok;
+
+public class Player {
+	String name;
+	int time;
+	int score;
+	
+}

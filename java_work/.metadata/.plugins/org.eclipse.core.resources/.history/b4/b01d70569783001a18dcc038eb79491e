@@ -1,0 +1,10 @@
+package org.wonseok.q2;
+
+public class MyVectorTest {
+	public static void main(String[] args) {
+		MyVector mv = new MyVector();
+		mv.add(2);
+		mv.add("문자열");
+		
+	}
+}

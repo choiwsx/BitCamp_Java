@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+		<item value="C:\Users\user\Downloads\testJDBC"/>
+		<item value="E:\cws_work\java_work\Week_Proj"/>
 		<item value="C:\Users\user\Downloads\jdbc_test2"/>
 		<item value="C:\Users\user\Downloads\mini_project_JJFrame"/>
 		<item value="C:\Users\user\Downloads\java_day20_project_"/>
