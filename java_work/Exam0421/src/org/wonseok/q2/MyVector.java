@@ -66,7 +66,7 @@ public class MyVector {
 				tmpArr[i] = objArr[i];  // 배열 복사
 			}
 			tmpArr[idx] = obj; //총 용량과 같아졌을 때, 매개변수로 들어온 값을 넣어줌 
-			this.objArr = tmpArr; // 더 큰 크기로 만든 배열을 
+			this.objArr = tmpArr; // 더 큰 크기로 만든 배열을 objArr로.
 			this.size++;
 		}
 	}
