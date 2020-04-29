@@ -1,0 +1,17 @@
+package org.wonseok;
+
+class a{
+	int x;
+	public a() {
+		this.x=10;
+		// TODO Auto-generated constructor stub
+	}
+}
+
+
+public class Test {
+
+	public static void main(String[] args) {
+		
+	}
+}
