@@ -1,9 +1,0 @@
-package org.wonseok.db_select;
-
-public class DbDeleteEx {
-
-	
-	public static void main(String[] args) {
-		
-	}
-}

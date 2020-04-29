@@ -1,9 +1,0 @@
-package org.wonseok.main;
-
-public class MainCls {
-
-	public MainCls() {
-		// TODO Auto-generated constructor stub
-	}
-
-}

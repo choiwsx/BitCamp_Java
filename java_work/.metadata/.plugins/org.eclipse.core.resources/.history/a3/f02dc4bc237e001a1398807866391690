@@ -1,9 +1,0 @@
-package org.wonseok.resource;
-
-import javax.swing.table.DefaultTableModel;
-
-public interface R {
-
-	
-	DefaultTableModel dm = new DefaultTableModel(10, 4);
-}

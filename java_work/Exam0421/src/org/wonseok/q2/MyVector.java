@@ -92,7 +92,7 @@ public class MyVector {
 				System.out.print(o.toString());				
 			}
 		}		
-		return " ]";
+		return " ]"; 
 	}
 
 	//매개변수로 받는 객체가 저장되어 있는 위치 

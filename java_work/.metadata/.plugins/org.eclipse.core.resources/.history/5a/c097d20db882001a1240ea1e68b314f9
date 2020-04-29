@@ -1,7 +1,0 @@
-package org.wonseok.controller;
-
-
-public class TT implements Runnable {
-
-	
-}

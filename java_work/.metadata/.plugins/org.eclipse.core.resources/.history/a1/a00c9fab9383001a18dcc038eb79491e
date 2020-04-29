@@ -1,6 +1,0 @@
-package org.wonseok.q2;
-
-public class MyVector {
-	//Object배열 objArr 변수
-	Object[] objArr;
-}

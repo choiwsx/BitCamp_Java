@@ -1,9 +1,0 @@
-package org.wonseok.view;
-
-public class ListView {
-
-	public ListView() {
-		// TODO Auto-generated constructor stub
-	}
-
-}

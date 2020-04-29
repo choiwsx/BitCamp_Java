@@ -1,9 +1,0 @@
-package org.wonseok.model;
-
-public class Dao {
-
-	public Dao() {
-		// TODO Auto-generated constructor stub
-	}
-
-}
